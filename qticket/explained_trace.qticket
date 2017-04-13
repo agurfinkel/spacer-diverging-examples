@@ -1,0 +1,426 @@
+* LEVEL 0
+expand-node: query level: 0
+true
+
+add-lemma: 0 query false
+
+* LEVEL 1
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: Error level: 0 depth: 0
+true
+
+add-lemma: 0 Error false
+
+expand-node: query level: 1 depth: 0
+true
+
+add-lemma-core: 1 query false
+
+* LEVEL 2
+expand-node: query level: 2 depth: 0
+true
+
+expand-node: Error level: 1 depth: 0
+true
+
+expand-node: Inv level: 0 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+;; very strong lemma based on the fact that everyone is in pc=0 initially
+add-lemma: 0 Inv (forall ((i Int)) (<= (select Inv_pc_n i) 0))
+instance: aux!6_n
+
+expand-node: Error level: 1 depth: 0
+true
+
+add-lemma: 1 Error false
+
+expand-node: query level: 2 depth: 0
+true
+
+add-lemma: 2 query false
+
+* LEVEL 3
+
+expand-node: query level: 3 depth: 0
+true
+
+expand-node: Error level: 2 depth: 0
+true
+
+expand-node: Inv level: 1 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+;; very strong lemma based on the fact that after one step everyone is in pc=0 || pc=1
+add-lemma: 1 Inv (forall ((i Int)) (not (>= (select Inv_pc_n i) 2)))
+instance: aux!6n
+
+expand-node: Error level: 2 depth: 0
+true
+
+add-lemma: 2 Error false
+
+expand-node: query level: 3 depth: 0
+true
+
+add-lemma: 3 query false
+
+* LEVEL 4
+
+expand-node: query level: 4 depth: 0
+true
+
+expand-node: Error level: 3 depth: 0
+true
+
+expand-node: Inv level: 2 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+;; first good lemma that we expect to be in the final solution
+add-lemma: 2 Inv
+(forall ((i Int) (j Int))
+  (=> (and (>= (select Inv_pc_n i) 2) (>= (select Inv_pc_n j) 2)) (= i j)))
+
+expand-node: Error level: 3 depth: 0
+true
+
+add-lemma: 3 Error false
+
+expand-node: query level: 4 depth: 0
+true
+
+add-lemma: 4 query false
+
+* LEVEL 5
+
+expand-node: query level: 5 depth: 0
+true
+
+expand-node: Error level: 4 depth: 0
+true
+
+expand-node: Inv level: 3 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+expand-node: Inv level: 2 depth: 0
+(and (not (= j i))
+     (> i j)
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+
+;; I think skolems i and j got switched here compared to previous cti. Not sure why.
+expand-node: Inv level: 1 depth: 0
+(and (= (select Inv_pc_n i) (select Inv_pc_n j))
+     (< i j)
+     (not (= j i))
+     (= (select Inv_t_n i) Inv_serving_n)
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+
+add-lemma: 1 Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n i) (select Inv_pc_n j))
+          (>= (select Inv_pc_n j) 1))
+     (<= j i))
+
+
+expand-node: Inv level: 2 depth: 0
+(and (not (= j i))
+     (> i j)
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+add-lemma: 2 Inv (forall ((j Int) (i Int))
+(=> (and (>= (select Inv_pc_n i) 2) (>= (select Inv_pc_n j) 1))
+    (<= i j)))
+
+
+expand-node: Inv level: 3 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+
+expand-node: Inv level: 2 depth: 0
+(and (< i j) (not (= j i))
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+add-lemma: 2 Inv (forall ((j Int) (i Int))
+  (=> (and (>= (select Inv_pc_n i) 2)
+           (<= (select Inv_pc_n j) 1))
+      (not (>= (select Inv_pc_n j) 1))))
+
+expand-node: Inv level: 3 depth: 0
+(and (< i j)
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+;; There is a better lemma at level 2, but it has not been pushed to level 3 yet
+add-lemma: 3 Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n j) 2)
+          (>= (select Inv_pc_n i) 2))
+      (>= i j))
+
+expand-node: Error level: 4 depth: 0
+true
+
+add-lemma: 4 Error false
+
+expand-node: query level: 5 depth: 0
+true
+
+add-lemma: 5 query false
+
+* PUSHING AFTER LEVEL 5
+push: 2->3: Inv (forall ((i Int) (j Int))
+  (=> (and (>= (select Inv_pc_n i) 2) (>= (select Inv_pc_n j) 2)) (= i j)))
+
+* LEVEL 6
+
+expand-node: query level: 6 depth: 0
+true
+
+expand-node: Error level: 5 depth: 0
+true
+
+expand-node: Inv level: 4 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+expand-node: Inv level: 3 depth: 0
+(and (< i j)
+     (not (= j i))
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+expand-node: Inv level: 2 depth: 0
+(and (not (= i j))
+     (> i j)
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_t_n i) Inv_serving_n)
+     (= (select Inv_t_n j) Inv_serving_n)
+     (= (select Inv_pc_n i) (select Inv_pc_n j)))
+
+expand-node: Inv level: 1 depth: 0
+(and (not (= i j))
+     (> i j)
+     (= (select Inv_pc_n j) 0)
+     (= (select Inv_pc_n i) 1)
+     (= (select Inv_t_n i) Inv_serving_n)
+     ;; the last conjunct seems strange
+     (= Inv_ticket_n (+ (select Inv_pc_n j) Inv_serving_n)))
+
+
+;; Good lemma
+add-lemma: 1 Inv (forall ((i Int))
+(=> (<= Inv_ticket_n (select Inv_t_n i))
+    (<= (select Inv_pc_n i) 0))
+
+expand-node: Inv level: 2 depth: 0
+(and (not (= i j))
+     (> i j)
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_t_n i) Inv_serving_n)
+     (= (select Inv_t_n j) Inv_serving_n)
+     (= (select Inv_pc_n i) (select Inv_pc_n j)))
+
+;; Good lemma
+add-lemma: 2 Inv (forall ((j Int) (i Int))
+(=> (and (>= (select Inv_pc_n j) 1)
+         (>= (select Inv_pc_n i) 1)
+         (= (select Inv_t_n i) (select Inv_t_n j)))
+    (<= i j)))
+
+expand-node: Inv level: 3 depth: 0
+(and (< i j)
+     (not (= j i))
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+expand-node: Inv level: 2 depth: 0
+(and (< i j)
+     (not (= j i))
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_pc_n j) 0)
+     (= Inv_ticket_n (+ Inv_serving_n (select Inv_pc_n j))))
+
+;; Good lemma
+add-lemma: 2 Inv (forall ((i Int))
+  (=> (>= (select Inv_pc_n i) 2) (not (>= Inv_serving_n Inv_ticket_n))))
+
+expand-node: Inv level: 3 depth: 0
+(and (< i j)
+     (not (= j i))
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+;; Good lemma
+add-lemma: 3 Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n j) 1)
+          (>= (select Inv_pc_n i) 2)
+          (= (select Inv_t_n j) Inv_serving_n))
+          (>= i j)))
+
+expand-node: Inv level: 4 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+expand-node: Inv level: 3 depth: 0
+(and (> i j) (not (= i j))
+     (= (select Inv_pc_n i) 2)
+     (= (select Inv_pc_n j) 1)
+     (= (select Inv_t_n j) Inv_serving_n))
+
+;; Good lemma
+add-lemma: 3 Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n i) 2)
+          (>= (select Inv_pc_n j) 1)
+          (= (select Inv_t_n j) Inv_serving_n))
+     (<= i j))
+
+expand-node: Inv level: 4 depth: 0
+(and (< i j) (= (select Inv_pc_n i) 2) (= (select Inv_pc_n j) (select Inv_pc_n i) ))
+
+;; Good lemma. But already exists at level 3. Still pushed from 3->4 later on.
+add-lemma: 4 Inv (forall ((j Int) (i Int))
+(=> (and (>= (select Inv_pc_n j) 2) (>= (select Inv_pc_n i) 2))
+    (= i j)))
+
+expand-node: Error level: 5 depth: 0
+true
+
+add-lemma: 5 Error false
+
+expand-node: query level: 6 depth: 0
+true
+
+add-lemma: 6 query false
+
+* PUSHING PHASE AFTER LEVEL 6
+push: 1->2: Inv (forall ((i Int)) (=> (<= Inv_ticket_n (select Inv_t_n i)) (<= (select Inv_pc_n i) 0))
+
+push: 2->3: Inv (forall ((i Int))
+  (=> (>= (select Inv_pc_n i) 2) (not (>= Inv_serving_n Inv_ticket_n))))
+
+push: 2->3: Inv (forall ((i Int)) (=> (<= Inv_ticket_n (select Inv_t_n i)) (<= (select Inv_pc_n i) 0))
+
+push: 2->3: Inv (forall ((j Int) (i Int))
+(=> (and (>= (select Inv_pc_n j) 1)
+         (>= (select Inv_pc_n i) 1)
+         (= (select Inv_t_n i) (select Inv_t_n j)))
+    (<= i j)))
+
+push: 3->4: Inv (forall ((i Int) (j Int))
+  (=> (and (>= (select Inv_pc_n i) 2) (>= (select Inv_pc_n j) 2)) (= i j)))
+
+
+push: 3->4: Inv (forall ((i Int))
+  (=> (>= (select Inv_pc_n i) 2) (not (>= Inv_serving_n Inv_ticket_n))))
+
+push: 3->4: Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n i) 2)
+          (>= (select Inv_pc_n j) 1)
+          (= (select Inv_t_n j) Inv_serving_n))
+     (<= i j))
+
+
+push: 3->4: Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n j) 2)
+          (>= (select Inv_pc_n i) 2))
+      (<= j i))
+
+push: 3->4: Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n i) 2)
+          (>= (select Inv_pc_n j) 1)
+          (= (select Inv_t_n j) Inv_serving_n))
+     (>= i j))
+
+push: 3->4: Inv (forall ((i Int)) (=> (<= Inv_ticket_n (select Inv_t_n i)) (<= (select Inv_pc_n i) 0))
+
+push: 3->4: Inv (forall ((j Int) (i Int))
+(=> (and (>= (select Inv_pc_n j) 1)
+         (>= (select Inv_pc_n i) 1)
+         (= (select Inv_t_n i) (select Inv_t_n j)))
+    (<= i j)))
+
+push: 4->oo: Inv (forall ((i Int) (j Int))
+  (=> (and (>= (select Inv_pc_n i) 2) (>= (select Inv_pc_n j) 2)) (= i j)))
+
+push: 4->oo Inv (forall ((i Int))
+  (=> (>= (select Inv_pc_n i) 2) (not (>= Inv_serving_n Inv_ticket_n))))
+
+push: 4->oo: Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n i) 2)
+          (>= (select Inv_pc_n j) 1)
+          (= (select Inv_t_n j) Inv_serving_n))
+     (<= i j))
+
+push: 4->oo: Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n j) 2)
+          (>= (select Inv_pc_n i) 2))
+      (<= j i))
+
+;; Discovered twice but with different instantiation of skolems
+push: 4->oo: Inv (forall ((i Int) (j Int))
+  (=> (and (>= (select Inv_pc_n i) 2) (>= (select Inv_pc_n j) 2)) (= i j)))
+
+push: 4->oo: Inv (forall ((j Int) (i Int))
+ (=> (and (>= (select Inv_pc_n i) 2)
+ (>= (select Inv_pc_n j) 1)
+          (= (select Inv_t_n j) Inv_serving_n))
+     (<= i j))
+
+
+push: 4->oo: Inv (forall ((i Int)) (=> (<= Inv_ticket_n (select Inv_t_n i)) (<= (select Inv_pc_n i) 0))
+
+push: 4->oo: Inv (forall ((j Int) (i Int))
+(=> (and (>= (select Inv_pc_n j) 1)
+         (>= (select Inv_pc_n i) 1)
+         (= (select Inv_t_n i) (select Inv_t_n j)))
+    (<= i j)))
+
+add-lemma-core: oo Error false
+
+add-lemma-core: oo query false
+
+* FINAL SOLUTION
+------------------------------------------------
+(define-fun Error () Bool
+  false)
+(define-fun Inv ((pc (Array Int Int))
+ (t (Array Int Int))
+ (serving Int)
+ (ticket Int)) Bool
+  (let ((a!1 (forall ((j Int) (i Int))
+               (or (<= (+ (* (- 1) j) i) 0)
+                     (<= (select pc j) 0)
+                     (<= (select pc i) 0)
+                     (not (= (+ (select t i) (* (- 1) (select t j))) 0))
+                     )))
+        (a!2 (forall ((i Int))
+               (or (not (>= (+ serving (* (- 1) ticket)) 0)) (not (>= (select pc i) 2)))))
+
+        (a!3 (forall ((j Int) (i Int))
+               (or (<= (select pc j) 0)
+                     (not (= (+ serving (* (- 1) (select t j))) 0))
+                     (>= (+ (* (- 1) j) i) 0)
+                     (not (>= (select pc i) 2)))))
+        (a!4 (forall ((j Int) (i Int))
+               (or (not (>= (select pc j) 2))
+                   (not (>= (select pc i) 2))
+                   (= (+ (* (- 1) j) i) 0))))
+        (a!5 (forall ((j Int) (i Int))
+               (or (<= (select pc j) 0)
+                     (<= (+ (* (- 1) j) i) 0)
+                     (not (= (+ serving (* (- 1) (select t j))) 0))
+                     (not (>= (select pc i) 2)))))
+        (a!6 (forall ((i Int))
+               (or (<= (select pc i) 0) (not (<= (+ ticket (* (- 1) (select t i))) 0))))))
+    (and a!1 a!2 a!3 a!4 a!5 a!6)))
+------------------------------------------------

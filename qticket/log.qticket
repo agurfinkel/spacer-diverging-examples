@@ -1,0 +1,354 @@
+(transform N7datalog13mk_coi_filterE...no-op 0s)
+(transform N7datalog25mk_interp_tail_simplifierE...6 rules 0s)
+(transform N7datalog27mk_quantifier_instantiationE...no-op 0s)
+(transform N7datalog8mk_scaleE...no-op 0s)
+(transform N7datalog18mk_karr_invariantsE...no-op 0s)
+(transform N7datalog14mk_array_blastE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog12mk_bit_blastE...no-op 0s)
+(transform N7datalog13mk_coi_filterE...no-op 0s)
+(transform N7datalog25mk_interp_tail_simplifierE...6 rules 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog13mk_coi_filterE...no-op 0s)
+(transform N7datalog25mk_interp_tail_simplifierE...6 rules 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+; rule count: 6
+; predicate count: 3
+; output: query!0
+<null>:
+Inv(#3,#2,#1,#0) :- 
+ (= (:var 0) 0),
+ (= (forall ((z1 Int)) (> (select (:var 3) z1) 0)) true),
+ (= (forall ((z1 Int)) (= (select (:var 4) z1) 0)) true),
+ (= (:var 1) 0).
+<null>:
+Inv(#3,#2,#1,#0) :- 
+ Inv(#7,#6,#1,#4),
+ (= (:var 2) (store (:var 6) (:var 5) (:var 4))),
+ (= (select (:var 7) (:var 5)) 0),
+ (= (:var 0) (+ 1 (:var 4))),
+ (= (:var 3) (store (:var 7) (:var 5) 1)).
+<null>:
+Inv(#3,#2,#1,#0) :- 
+ Inv(#5,#2,#1,#0),
+ (= (select (:var 5) (:var 4)) 1),
+ (= (select (:var 2) (:var 4)) (:var 1)),
+ (= (:var 3) (store (:var 5) (:var 4) 2)).
+<null>:
+Inv(#3,#2,#1,#0) :- 
+ Inv(#5,#2,#6,#0),
+ (= (select (:var 5) (:var 4)) 2),
+ (= (:var 1) (+ 1 (select (:var 2) (:var 4)))),
+ (= (:var 3) (store (:var 5) (:var 4) 0)).
+<null>:
+Error() :- 
+ Inv(#1,#5,#4,#3),
+ (= (select (:var 1) (:var 0)) 2),
+ (not (= (:var 2) (:var 0))),
+ (= (select (:var 1) (:var 2)) 2).
+<null>:
+query!0() :- 
+ Error().
+non-diff: (select (:var 3) (:var 0))
+non-utvpi: (select (:var 3) (:var 0))
+expand: query!0 (0, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.00 :before-memory 4.96 :after-memory 5.39)
+Entering level 1
+BRUNCH_STAT max_query_lvl 0
+BRUNCH_STAT num_queries 0
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 1
+BRUNCH_STAT cex_depth 0
+expand: query!0 (1, 0) FAR  w(0) 1.
+	create_child: Error (0, 1) FAR 1 U 0.00
+expand: Error (0, 0) FAR  w(0) 1. F 0.00
+expand: query!0 (1, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.00 :before-memory 5.39 :after-memory 5.84)
+Propagating: 0 1  ! 2 
+(spacer::context::propagate :time 0.00 :before-memory 5.84 :after-memory 5.86)
+Entering level 2
+BRUNCH_STAT max_query_lvl 1
+BRUNCH_STAT num_queries 1
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 2
+BRUNCH_STAT cex_depth 0
+expand: query!0 (2, 0) FAR  w(0) 1.
+	create_child: Error (1, 2) FAR 1 U 0.00
+expand: Error (1, 0) FAR  w(0) 1.
+	create_child: Inv (0, 2) FAR 566 UNDEF 0.00
+expand: Inv (0, 0) FAR  w(0) 566. F 0.01
+expand: Error (1, 0) FAR  w(0) 1. F 0.00
+expand: query!0 (2, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.01 :before-memory 5.86 :after-memory 6.42)
+Propagating: 0 1 2  ! 3 
+(spacer::context::propagate :time 0.00 :before-memory 6.42 :after-memory 6.50)
+Entering level 3
+BRUNCH_STAT max_query_lvl 2
+BRUNCH_STAT num_queries 3
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 3
+BRUNCH_STAT cex_depth 0
+expand: query!0 (3, 0) FAR  w(0) 1.
+	create_child: Error (2, 3) FAR 1 U 0.00
+expand: Error (2, 0) FAR  w(0) 1.
+	create_child: Inv (1, 3) FAR 994 UNDEF 0.00
+expand: Inv (1, 0) FAR  w(0) 994. F 0.01
+expand: Error (2, 0) FAR  w(0) 1. F 0.00
+expand: query!0 (3, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.02 :before-memory 6.50 :after-memory 6.54)
+Propagating: 1 2 3  ! 4 
+(spacer::context::propagate :time 0.00 :before-memory 6.54 :after-memory 6.56)
+Entering level 4
+BRUNCH_STAT max_query_lvl 3
+BRUNCH_STAT num_queries 5
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 4
+BRUNCH_STAT cex_depth 0
+expand: query!0 (4, 0) FAR  w(0) 1.
+	create_child: Error (3, 4) FAR 1 U 0.00
+expand: Error (3, 0) FAR  w(0) 1.
+	create_child: Inv (2, 4) FAR 1523 UNDEF 0.00
+expand: Inv (2, 0) FAR  w(0) 1523. F 0.02
+expand: Error (3, 0) FAR  w(0) 1. F 0.00
+expand: query!0 (4, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.02 :before-memory 6.56 :after-memory 6.63)
+Propagating: 2 3 4  ! 5 
+(spacer::context::propagate :time 0.00 :before-memory 6.63 :after-memory 6.68)
+Entering level 5
+BRUNCH_STAT max_query_lvl 4
+BRUNCH_STAT num_queries 7
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 5
+BRUNCH_STAT cex_depth 0
+expand: query!0 (5, 0) FAR  w(0) 1.
+	create_child: Error (4, 5) FAR 1 U 0.00
+expand: Error (4, 0) FAR  w(0) 1.
+	create_child: Inv (3, 5) FAR 1499 UNDEF 0.00
+expand: Inv (3, 0) FAR  w(0) 1499.
+	create_child: Inv (2, 5) FAR 2477 UNDEF 0.01
+expand: Inv (2, 0) FAR  w(0) 2477.
+	create_child: Inv (1, 5) FAR 2230 UNDEF 0.01
+expand: Inv (1, 0) FAR  w(0) 2230. F 0.03
+expand: Inv (2, 0) FAR  w(0) 2477. F 0.05
+expand: Inv (3, 0) FAR  w(0) 1499.
+	create_child: Inv (2, 5) FAR 2708 UNDEF 0.01
+expand: Inv (2, 0) FAR  w(0) 2708. F 0.04
+expand: Inv (3, 0) FAR  w(0) 1499. F 0.06
+expand: Error (4, 0) FAR  w(0) 1. F 0.00
+expand: query!0 (5, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.22 :before-memory 6.68 :after-memory 7.07)
+Propagating: 1 2 3 4 5  ! 6 
+(spacer::context::propagate :time 0.08 :before-memory 7.07 :after-memory 7.55)
+Entering level 6
+BRUNCH_STAT max_query_lvl 5
+BRUNCH_STAT num_queries 12
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 6
+BRUNCH_STAT cex_depth 0
+expand: query!0 (6, 0) FAR  w(0) 1.
+	create_child: Error (5, 6) FAR 1 U 0.00
+expand: Error (5, 0) FAR  w(0) 1.
+	create_child: Inv (4, 6) FAR 3893 UNDEF 0.00
+expand: Inv (4, 0) FAR  w(0) 3893.
+	create_child: Inv (3, 6) FAR 4245 UNDEF 0.01
+expand: Inv (3, 0) FAR  w(0) 4245.
+	create_child: Inv (2, 6) FAR 3567 UNDEF 0.01
+expand: Inv (2, 0) FAR  w(0) 3567.
+	create_child: Inv (1, 6) FAR 4183 UNDEF 0.03
+expand: Inv (1, 0) FAR  w(0) 4183. F 0.05
+expand: Inv (2, 0) FAR  w(0) 3567. F 0.16
+expand: Inv (3, 0) FAR  w(0) 4245.
+	create_child: Inv (2, 6) FAR 3972 UNDEF 0.03
+expand: Inv (2, 0) FAR  w(0) 3972. F 0.05
+expand: Inv (3, 0) FAR  w(0) 4245. F 0.15
+expand: Inv (4, 0) FAR  w(0) 3893.
+	create_child: Inv (3, 6) FAR 6379 UNDEF 0.01
+expand: Inv (3, 0) FAR  w(0) 6379. F 0.15
+expand: Inv (4, 0) FAR  w(0) 3893. F 0.09
+expand: Error (5, 0) FAR  w(0) 1. F 0.00
+expand: query!0 (6, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.75 :before-memory 7.55 :after-memory 7.74)
+Propagating: 1 2 3 
+(spacer::context::propagate :time 0.41 :before-memory 7.74 :after-memory 8.27)
+(define-fun Error () Bool
+  false)
+(define-fun Inv ((pc (Array Int Int))
+ (t (Array Int Int))
+ (serving Int)
+ (ticket Int)) Bool
+  (let ((a!1 (forall ((j Int) (i Int))
+               (or (<= (+ (* (- 1) j) i) 0)
+                     (<= (select pc j) 0)
+                     (<= (select pc i) 0)
+                     (not (= (+ (select t i) (* (- 1) (select t j))) 0))
+                     )))
+        (a!2 (forall ((i Int))
+               (or (not (>= (+ serving (* (- 1) ticket)) 0)) (not (>= (select pc i) 2)))))
+               
+        (a!3 (forall ((j Int) (i Int))
+               (or (<= (select pc j) 0)
+                     (not (= (+ serving (* (- 1) (select t j))) 0))
+                     (>= (+ (* (- 1) j) i) 0)
+                     (not (>= (select pc i) 2)))))
+        (a!4 (forall ((j Int) (i Int))
+               (or (not (>= (select pc j) 2))
+                   (not (>= (select pc i) 2))
+                   (= (+ (* (- 1) j) i) 0))))
+        (a!5 (forall ((j Int) (i Int))
+               (or (<= (select pc j) 0)
+                     (<= (+ (* (- 1) j) i) 0)
+                     (not (= (+ serving (* (- 1) (select t j))) 0))
+                     (not (>= (select pc i) 2)))))
+        (a!6 (forall ((i Int))
+               (or (<= (select pc i) 0) (not (<= (+ ticket (* (- 1) (select t i))) 0))))))
+    (and a!1 a!2 a!3 a!4 a!5 a!6)))
+BRUNCH_STAT max_query_lvl 6
+BRUNCH_STAT num_queries 19
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 3
+BRUNCH_STAT max_depth 6
+BRUNCH_STAT cex_depth 0
+(:SPACER-expand-node-undef             13
+ :SPACER-inductive-level               3
+ :SPACER-max-depth                     6
+ :SPACER-max-query-lvl                 6
+ :SPACER-num-invariants                10
+ :SPACER-num-lemmas                    26
+ :SPACER-num-properties                13
+ :SPACER-num-queries                   19
+ :add-rows                             13231
+ :added-eqs                            17452
+ :arith-conflicts                      358
+ :array-ax1                            4
+ :array-ax2                            1284
+ :array-exp-ax2                        609
+ :array-ext-ax                         30
+ :array-splits                         30
+ :assert-diseq                         4314
+ :assert-lower                         7903
+ :assert-upper                         8930
+ :bool-inductive-gen                   13
+ :bool-inductive-gen-failures          38
+ :bound-prop                           1627
+ :conflicts                            1630
+ :decisions                            16598
+ :del-clause                           34826
+ :eq-adapter                           9222
+ :final-checks                         220
+ :fixed-eqs                            2450
+ :interface-eqs                        51
+ :max-generation                       2
+ :minimized-lits                       192
+ :mk-bool-var                          38814
+ :mk-clause                            35115
+ :num-checks                           235
+ :offset-eqs                           986
+ :pivots                               2706
+ :propagations                         33776
+ :quant-instantiations                 36916
+ :time.spacer.init_rules               0.02
+ :time.spacer.init_rules.pt.init       0.00
+ :time.spacer.solve                    1.54
+ :time.spacer.solve.propagate          0.51
+ :time.spacer.solve.reach              1.03
+ :time.spacer.solve.reach.children     0.04
+ :time.spacer.solve.reach.gen.bool_ind 0.56
+ :time.virtual_solver.proof            0.00
+ :time.virtual_solver.smt.total        1.23
+ :time.virtual_solver.smt.total.sat    0.00
+ :time.virtual_solver.smt.total.undef  0.50
+ :virtual_solver.checks                235
+ :virtual_solver.checks.sat            11
+ :virtual_solver.checks.undef          69)
+unsat
+BRUNCH_STAT max_query_lvl 6
+BRUNCH_STAT num_queries 19
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 3
+BRUNCH_STAT max_depth 6
+BRUNCH_STAT cex_depth 0
+(:SPACER-expand-node-undef             13
+ :SPACER-inductive-level               3
+ :SPACER-max-depth                     6
+ :SPACER-max-query-lvl                 6
+ :SPACER-num-invariants                10
+ :SPACER-num-lemmas                    26
+ :SPACER-num-properties                13
+ :SPACER-num-queries                   19
+ :add-rows                             13231
+ :added-eqs                            17452
+ :arith-conflicts                      358
+ :array-ax1                            4
+ :array-ax2                            1284
+ :array-exp-ax2                        609
+ :array-ext-ax                         30
+ :array-splits                         30
+ :assert-diseq                         4314
+ :assert-lower                         7903
+ :assert-upper                         8930
+ :bool-inductive-gen                   13
+ :bool-inductive-gen-failures          38
+ :bound-prop                           1627
+ :conflicts                            1630
+ :decisions                            16598
+ :del-clause                           34826
+ :eq-adapter                           9222
+ :final-checks                         220
+ :fixed-eqs                            2450
+ :interface-eqs                        51
+ :max-generation                       2
+ :max-memory                           9.42
+ :memory                               8.30
+ :minimized-lits                       192
+ :mk-bool-var                          38814
+ :mk-clause                            35115
+ :num-allocs                           1248300
+ :num-checks                           235
+ :offset-eqs                           986
+ :pivots                               2706
+ :propagations                         33776
+ :quant-instantiations                 36916
+ :rlimit-count                         1016118
+ :time                                 1.64
+ :time.spacer.init_rules               0.02
+ :time.spacer.init_rules.pt.init       0.00
+ :time.spacer.solve                    1.54
+ :time.spacer.solve.propagate          0.51
+ :time.spacer.solve.reach              1.03
+ :time.spacer.solve.reach.children     0.04
+ :time.spacer.solve.reach.gen.bool_ind 0.56
+ :time.virtual_solver.proof            0.00
+ :time.virtual_solver.smt.total        1.23
+ :time.virtual_solver.smt.total.sat    0.00
+ :time.virtual_solver.smt.total.undef  0.50
+ :virtual_solver.checks                235
+ :virtual_solver.checks.sat            11
+ :virtual_solver.checks.undef          69)
+(:max-memory   9.42
+ :memory       8.29
+ :num-allocs   1248312
+ :rlimit-count 1016118
+ :time         1.64
+ :total-time   1.63)
