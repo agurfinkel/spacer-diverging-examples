@@ -31,7 +31,7 @@
          (< i N)
          (L1 (+ i 1) tmp N A (store B i (select A i)))))
 
-(rule (=> (and (L2 i tmp N A B) (< i N) (distinct (select A i) (select B i)))
+(rule (=> (and (L2 i tmp N A B) (< i N) (> (select A i) (select B i)))
 		  Error))
 
 (rule (=> (and (L2 i tmp N A B) (< i N))
