@@ -1,0 +1,19 @@
+H (n,c, n,s,r)
+(and 	
+	(or 
+		(<= (+ c s (* (- 1) r)) 0) 
+		(not (<= (+ n (* (- 1) n)) 0))
+	)
+    (or (<= (+ r (* (- 1) c) (* (- 1) s)) 0)
+    	(not (>= (+ n (* (- 1) n)) 0))
+    )
+)
+
+equivalent to
+(and 
+	(<= c (- r s))
+	(<= (r - s) c)
+)
+
+equivalent to
+c = r-s
