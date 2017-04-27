@@ -1,0 +1,75 @@
+esop_v2.smt2
+Interesting observation: one thing which could be improved is to use an existentially quantified value instead of the concrete values used here. Would this already require Vampire in order to get generated?
+
+LEVEL 2:
+CTI at level 0: (and (1236 < N) (A[1236] < B[1236])) (call this CTI1)
+Lemma blocking CTI1 at level 0: false
+
+LEVEL 3:
+CTI at level 1: (and (8855 < N) (A[8855] < B[8855])) (call this CTI2)
+CTI at level 0: (and (8855 < N) (A[8855] < B[8855]) (N <= i)) (call this CTI3)
+Lemma blocking CTI3 at level 0: (i <= 0)
+Lemma blocking CTI2 at level 1: (N <= 1236)
+
+CTI at level 1: (and (673 < N) (A[673] < B[673])) (call this CTI4)
+Lemma blocking CTI4 at level 1: (N <= 0)
+
+LEVEL 4:
+CTI at level 2: (and (2282 < N) (A[2282] < B[2282])) (call this CTI5)
+CTI at level 1: (and (2282 < N) (A[2282] < B[2282]) (N <= i)) (call this CTI6)
+Lemma blocking CTI6 at level 1: (i <= 1)
+Lemma blocking CTI5 at level 2: (N <= 1236)
+
+CTI at level 2: (and (562 < N) (A[562] < B[562])) (call this CTI7)
+Lemma blocking CTI7 at level 2: (N <= 1)
+
+CTI at level 2: (and (0 < N) (A[0] < B[0])) (call this CTI8)
+CTI at level 1: (and (0 < N) (A[0] < B[0]) (N <= i)) (call this CTI9)
+Lemma blocking CTI9 at level 1: (=> (i > 0) (B[0] <= A[0])) (call this lemma2)
+Lemma blocking CTI8 at level 2: (=> (N > 0) (B[0] <= A[0])) (call this lemma3)
+
+LEVEL 5:
+CTI at level 3: (and (1 < N) (A[1] < B[1])) (call this CTI10)
+CTI at level 2: (and (1 < N) (A[1] < B[1]) (N <= i)) (call this CTI11)
+Lemma blocking CTI11 at level 2: (=> (and (i >= N) (N > 1)) (B[1] <= A[1])) (this is similar to lemma2)
+Lemma blocking CTI10 at level 3: (=> (N > 1) (B[1] <= A[1])) (this is similar to lemma3)
+
+CTI at level 3: (and (1143 < N) (A[1143] < B[1143])) (call this CTI12)
+CTI at level 2: (and (1143 < N) (A[1143] < B[1143]) (N <= i)) (call this CTI13)
+Lemma blocking CTI13 at level 2: (i <= 2) (call this lemma4)
+Lemma blocking CTI12 at level 3: (N <= 673)
+
+CTI at level 3: (and (466 < N) (A[466] < B[466])) (call this CTI14)
+Lemma blocking CTI14 at level 2: (N <= 2) (call this lemma5)
+
+LEVEL 6:
+CTI at level 4: (and (1 < N) (A[1] < B[1])) (call this CTI15)
+CTI at level 3: (and (1 < N) (A[1] < B[1]) (N <= i)) (call this CTI16) (why is this not blocked by lemma blocking CTI10?)
+CTI at level 2: (and (1 < N) (A[1] < B[1]) (N <= i+1) (i != 1) (N > i)) (call this CTI17) (step in loop 1, i != 1 otherwise array is updated, i < n to stay in the loop)
+Lemma blocking CTI17 at level 2: (=> (i > 1) (B[1] <= A[1])) (call this lemma6)
+Lemma blocking CTI16 at level 3: (=> (and (i >= N) (N > 1)) (B[1] <= A[1]))
+Lemma blocking CTI15 at level 4: (=> (N > 1) (B[1] <= A[1])) (call this lemma7)
+
+CTI at level 4: (and (2 < N) (A[2] < B[2])) (call this CTI18)
+CTI at level 3: (and (2 < N) (A[2] < B[2]) (N <= i)) (call this CTI19)
+Lemma blocking CTI19 at level 3: (=> (and (i >= N) (N > 2)) (B[2] <= A[2]))
+Lemma blocking CTI15 at level 4: (=> (N > 2) (B[2] <= A[2])) (call this lemma7)
+
+CTI at level 4: (and (976 < N) (A[976] < B[976])) (call this CTI20)
+CTI at level 3: (and (976 < N) (A[976] < B[976]) (N <= i)) (call this CT21)
+Lemma blocking CTI21 at level 3: (i <= 3)
+Lemma blocking CTI20 at level 4: (N <= 976)
+
+CTI at level 4: (and (410 < N) (A[410] < B[410])) (call this CTI22)
+Lemma blocking CTI20 at level 4: (N <= 3)
+
+
+I.e. for LEVEL k+4:
+CTI at level k+2: (and (k < N) (A[k] < B[k]))
+CTI at level k+1: (and (k < N) (A[k] < B[k]) (N <= i))
+Lemma blocking second CTI: (=> (i > k) (B[k] <= A[k]))
+Lemma blocking first CTI: (=> (N > k) (B[k] <= A[k]))
+
+furthermore lemmas i <= k and N <= k (N <+ k is true if we are able to assume i <=k and TR)
+
+
