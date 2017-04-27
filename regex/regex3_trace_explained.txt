@@ -1,5 +1,6 @@
 H(n c m s r)
 
+
 expand-node: query level: 0 depth: 0
 true
 
@@ -29,21 +30,17 @@ expand-node: query level: 1 depth: 0
 true
 
 expand-node: query level: 0 depth: 0
-(and (= s 0) (<= m n) (> r
- c))
+(and (= s 0) (<= m n) (> r c))
 
-add-lemma: 0 H (<= (+ r
- (* (- 1) c) (* (- 1) s)) 0)
+add-lemma: 0 H (<= (+ r (* (- 1) c) (* (- 1) s)) 0)
 
 expand-node: query level: 1 depth: 0
 true
 
 expand-node: query level: 0 depth: 0
-(and (= s 0) (<= m n) (> c r
-))
+(and (= s 0) (<= m n) (> c r))
 
-add-lemma: 0 H (<= (+ c s (* (- 1) r
-)) 0)
+add-lemma: 0 H (<= (+ c s (* (- 1) r)) 0)
 
 expand-node: query level: 1 depth: 0
 true
@@ -64,23 +61,18 @@ expand-node: query level: 2 depth: 0
 true
 
 expand-node: query level: 1 depth: 0
-(and (> r
- c) (= s 0) (<= m n))
+(and (> r c) (= s 0) (<= m n))
 
-add-lemma: 1 H (or (<= (+ r
- (* (- 1) c) (* (- 1) s)) 0) (< n m))
+add-lemma: 1 H (or (<= (+ r (* (- 1) c) (* (- 1) s)) 0) (< n m))
 
 expand-node: query level: 2 depth: 0
 true
 
 expand-node: query level: 1 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 1 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c m s (* (- 1) n) (* (- 1) r
-    )) 0))
+add-lemma: 1 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c m s (* (- 1) n) (* (- 1) r)) 0))
 
 expand-node: query level: 2 depth: 0
 true
@@ -101,13 +93,10 @@ expand-node: query level: 3 depth: 0
 true
 
 expand-node: query level: 2 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 2 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 2) n) (* (- 1) r
-    ) (* 2 m)) 0))
+add-lemma: 2 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 2) n) (* (- 1) r) (* 2 m)) 0))
 
 expand-node: query level: 3 depth: 0
 true
@@ -128,13 +117,10 @@ expand-node: query level: 4 depth: 0
 true
 
 expand-node: query level: 3 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 3 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 3) n) (* (- 1) r
-    ) (* 3 m)) 0))
+add-lemma: 3 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 3) n) (* (- 1) r) (* 3 m)) 0))
 
 expand-node: query level: 4 depth: 0
 true
@@ -155,13 +141,10 @@ expand-node: query level: 5 depth: 0
 true
 
 expand-node: query level: 4 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 4 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 4) n) (* (- 1) r
-    ) (* 4 m)) 0))
+add-lemma: 4 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 4) n) (* (- 1) r) (* 4 m)) 0))
 
 expand-node: query level: 5 depth: 0
 true
@@ -182,13 +165,10 @@ expand-node: query level: 6 depth: 0
 true
 
 expand-node: query level: 5 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 5 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 5) n) (* (- 1) r
-    ) (* 5 m)) 0))
+add-lemma: 5 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 5) n) (* (- 1) r) (* 5 m)) 0))
 
 expand-node: query level: 6 depth: 0
 true
@@ -209,13 +189,10 @@ expand-node: query level: 7 depth: 0
 true
 
 expand-node: query level: 6 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 6 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 6) n) (* (- 1) r
-    ) (* 6 m)) 0))
+add-lemma: 6 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 6) n) (* (- 1) r) (* 6 m)) 0))
 
 expand-node: query level: 7 depth: 0
 true
@@ -236,13 +213,10 @@ expand-node: query level: 8 depth: 0
 true
 
 expand-node: query level: 7 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 7 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 7) n) (* (- 1) r
-    ) (* 7 m)) 0))
+add-lemma: 7 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 7) n) (* (- 1) r) (* 7 m)) 0))
 
 expand-node: query level: 8 depth: 0
 true
@@ -263,13 +237,10 @@ expand-node: query level: 9 depth: 0
 true
 
 expand-node: query level: 8 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 8 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 8) n) (* (- 1) r
-    ) (* 8 m)) 0))
+add-lemma: 8 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 8) n) (* (- 1) r) (* 8 m)) 0))
 
 expand-node: query level: 9 depth: 0
 true
@@ -290,13 +261,10 @@ expand-node: query level: 10 depth: 0
 true
 
 expand-node: query level: 9 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 9 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 9) n) (* (- 1) r
-    ) (* 9 m)) 0))
+add-lemma: 9 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 9) n) (* (- 1) r) (* 9 m)) 0))
 
 expand-node: query level: 10 depth: 0
 true
@@ -317,13 +285,10 @@ expand-node: query level: 11 depth: 0
 true
 
 expand-node: query level: 10 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 10 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 10) n) (* (- 1) r
-    ) (* 10 m)) 0))
+add-lemma: 10 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 10) n) (* (- 1) r) (* 10 m)) 0))
 
 expand-node: query level: 11 depth: 0
 true
@@ -344,13 +309,10 @@ expand-node: query level: 12 depth: 0
 true
 
 expand-node: query level: 11 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 11 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 11) n) (* (- 1) r
-    ) (* 11 m)) 0))
+add-lemma: 11 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 11) n) (* (- 1) r) (* 11 m)) 0))
 
 expand-node: query level: 12 depth: 0
 true
@@ -371,13 +333,10 @@ expand-node: query level: 13 depth: 0
 true
 
 expand-node: query level: 12 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 12 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 12) n) (* (- 1) r
-    ) (* 12 m)) 0))
+add-lemma: 12 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 12) n) (* (- 1) r) (* 12 m)) 0))
 
 expand-node: query level: 13 depth: 0
 true
@@ -398,13 +357,10 @@ expand-node: query level: 14 depth: 0
 true
 
 expand-node: query level: 13 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 13 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 13) n) (* (- 1) r
-    ) (* 13 m)) 0))
+add-lemma: 13 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 13) n) (* (- 1) r) (* 13 m)) 0))
 
 expand-node: query level: 14 depth: 0
 true
@@ -425,13 +381,10 @@ expand-node: query level: 15 depth: 0
 true
 
 expand-node: query level: 14 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 14 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 14) n) (* (- 1) r
-    ) (* 14 m)) 0))
+add-lemma: 14 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 14) n) (* (- 1) r) (* 14 m)) 0))
 
 expand-node: query level: 15 depth: 0
 true
@@ -452,13 +405,10 @@ expand-node: query level: 16 depth: 0
 true
 
 expand-node: query level: 15 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 15 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 15) n) (* (- 1) r
-    ) (* 15 m)) 0))
+add-lemma: 15 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 15) n) (* (- 1) r) (* 15 m)) 0))
 
 expand-node: query level: 16 depth: 0
 true
@@ -479,13 +429,10 @@ expand-node: query level: 17 depth: 0
 true
 
 expand-node: query level: 16 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 16 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 16) n) (* (- 1) r
-    ) (* 16 m)) 0))
+add-lemma: 16 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 16) n) (* (- 1) r) (* 16 m)) 0))
 
 expand-node: query level: 17 depth: 0
 true
@@ -506,13 +453,10 @@ expand-node: query level: 18 depth: 0
 true
 
 expand-node: query level: 17 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 17 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 17) n) (* (- 1) r
-    ) (* 17 m)) 0))
+add-lemma: 17 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 17) n) (* (- 1) r) (* 17 m)) 0))
 
 expand-node: query level: 18 depth: 0
 true
@@ -533,13 +477,10 @@ expand-node: query level: 19 depth: 0
 true
 
 expand-node: query level: 18 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 18 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 18) n) (* (- 1) r
-    ) (* 18 m)) 0))
+add-lemma: 18 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 18) n) (* (- 1) r) (* 18 m)) 0))
 
 expand-node: query level: 19 depth: 0
 true
@@ -560,13 +501,10 @@ expand-node: query level: 20 depth: 0
 true
 
 expand-node: query level: 19 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 19 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 19) n) (* (- 1) r
-    ) (* 19 m)) 0))
+add-lemma: 19 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 19) n) (* (- 1) r) (* 19 m)) 0))
 
 expand-node: query level: 20 depth: 0
 true
@@ -587,13 +525,10 @@ expand-node: query level: 21 depth: 0
 true
 
 expand-node: query level: 20 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 20 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 20) n) (* (- 1) r
-    ) (* 20 m)) 0))
+add-lemma: 20 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 20) n) (* (- 1) r) (* 20 m)) 0))
 
 expand-node: query level: 21 depth: 0
 true
@@ -614,13 +549,10 @@ expand-node: query level: 22 depth: 0
 true
 
 expand-node: query level: 21 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 21 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 21) n) (* (- 1) r
-    ) (* 21 m)) 0))
+add-lemma: 21 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 21) n) (* (- 1) r) (* 21 m)) 0))
 
 expand-node: query level: 22 depth: 0
 true
@@ -641,13 +573,10 @@ expand-node: query level: 23 depth: 0
 true
 
 expand-node: query level: 22 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 22 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 22) n) (* (- 1) r
-    ) (* 22 m)) 0))
+add-lemma: 22 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 22) n) (* (- 1) r) (* 22 m)) 0))
 
 expand-node: query level: 23 depth: 0
 true
@@ -668,13 +597,10 @@ expand-node: query level: 24 depth: 0
 true
 
 expand-node: query level: 23 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 23 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 23) n) (* (- 1) r
-    ) (* 23 m)) 0))
+add-lemma: 23 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 23) n) (* (- 1) r) (* 23 m)) 0))
 
 expand-node: query level: 24 depth: 0
 true
@@ -695,13 +621,10 @@ expand-node: query level: 25 depth: 0
 true
 
 expand-node: query level: 24 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 24 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 24) n) (* (- 1) r
-    ) (* 24 m)) 0))
+add-lemma: 24 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 24) n) (* (- 1) r) (* 24 m)) 0))
 
 expand-node: query level: 25 depth: 0
 true
@@ -722,13 +645,10 @@ expand-node: query level: 26 depth: 0
 true
 
 expand-node: query level: 25 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 25 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 25) n) (* (- 1) r
-    ) (* 25 m)) 0))
+add-lemma: 25 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 25) n) (* (- 1) r) (* 25 m)) 0))
 
 expand-node: query level: 26 depth: 0
 true
@@ -749,13 +669,10 @@ expand-node: query level: 27 depth: 0
 true
 
 expand-node: query level: 26 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 26 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 26) n) (* (- 1) r
-    ) (* 26 m)) 0))
+add-lemma: 26 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 26) n) (* (- 1) r) (* 26 m)) 0))
 
 expand-node: query level: 27 depth: 0
 true
@@ -776,13 +693,10 @@ expand-node: query level: 28 depth: 0
 true
 
 expand-node: query level: 27 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 27 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 27) n) (* (- 1) r
-    ) (* 27 m)) 0))
+add-lemma: 27 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 27) n) (* (- 1) r) (* 27 m)) 0))
 
 expand-node: query level: 28 depth: 0
 true
@@ -803,13 +717,10 @@ expand-node: query level: 29 depth: 0
 true
 
 expand-node: query level: 28 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 28 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 28) n) (* (- 1) r
-    ) (* 28 m)) 0))
+add-lemma: 28 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 28) n) (* (- 1) r) (* 28 m)) 0))
 
 expand-node: query level: 29 depth: 0
 true
@@ -830,13 +741,10 @@ expand-node: query level: 30 depth: 0
 true
 
 expand-node: query level: 29 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 29 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 29) n) (* (- 1) r
-    ) (* 29 m)) 0))
+add-lemma: 29 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 29) n) (* (- 1) r) (* 29 m)) 0))
 
 expand-node: query level: 30 depth: 0
 true
@@ -857,13 +765,10 @@ expand-node: query level: 31 depth: 0
 true
 
 expand-node: query level: 30 depth: 0
-(and (> c r
-) (= s 0) (<= m n))
+(and (> c r) (= s 0) (<= m n))
 
-add-lemma: 30 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 30) n) (* (- 1) r
-    ) (* 30 m)) 0))
+add-lemma: 30 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 30) n) (* (- 1) r) (* 30 m)) 0))
 
 expand-node: query level: 31 depth: 0
 true
@@ -884,13 +789,10 @@ expand-node: query level: 32 depth: 0
 true
 
 expand-node: query level: 31 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 31 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 31) n) (* (- 1) r
-    ) (* 31 m)) 0))
+add-lemma: 31 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 31) n) (* (- 1) r) (* 31 m)) 0))
 
 expand-node: query level: 32 depth: 0
 true
@@ -911,13 +813,10 @@ expand-node: query level: 33 depth: 0
 true
 
 expand-node: query level: 32 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 32 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 32) n) (* (- 1) r
-    ) (* 32 m)) 0))
+add-lemma: 32 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 32) n) (* (- 1) r) (* 32 m)) 0))
 
 expand-node: query level: 33 depth: 0
 true
@@ -938,13 +837,10 @@ expand-node: query level: 34 depth: 0
 true
 
 expand-node: query level: 33 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 33 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 33) n) (* (- 1) r
-    ) (* 33 m)) 0))
+add-lemma: 33 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 33) n) (* (- 1) r) (* 33 m)) 0))
 
 expand-node: query level: 34 depth: 0
 true
@@ -965,13 +861,10 @@ expand-node: query level: 35 depth: 0
 true
 
 expand-node: query level: 34 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
-add-lemma: 34 H (or (<= (+ c s (* (- 1) r
-)) 0)
-    (<= (+ c s (* (- 34) n) (* (- 1) r
-    ) (* 34 m)) 0))
+add-lemma: 34 H (or (<= (+ c s (* (- 1) r)) 0)
+    (<= (+ c s (* (- 34) n) (* (- 1) r) (* 34 m)) 0))
 
 expand-node: query level: 35 depth: 0
 true
@@ -992,6 +885,5 @@ expand-node: query level: 36 depth: 0
 true
 
 expand-node: query level: 35 depth: 0
-(and (> c r
-) (<= m n) (= s 0))
+(and (> c r) (<= m n) (= s 0))
 
