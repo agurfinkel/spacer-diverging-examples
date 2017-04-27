@@ -1,13 +1,11 @@
 ;; same encoding as esop, but uses quantifier for second loop
-;; immediately terminates
 ;;
 ;; for (int i = 0; i < N; i++)
 ;;    B[i] = A[i]
 ;; 	  i = i+1
 ;;
 ;; for (int i = 0; i < N; i++)
-;;    tmp = A[i]
-;;    assert (B[i] = tmp)
+;;    assert (B[i] = A[i])
 
 ;; Location (i tmp N A B)
 (declare-rel L1 (Int Int Int (Array Int Int) (Array Int Int)) )
