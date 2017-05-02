@@ -1,0 +1,10 @@
+Problem:
+For increasing constants c, algorithm produces the following lemmas:
+1) i < c (which will never get inductive)
+2) (i > c) implies (A[c]=0)
+
+convex closure would yield for increasing constants c: 
+(i > c) implies (forall 1<=x<c : A[x] = 0) (which would still be divergent)
+
+The thing we actually want is 
+forall y: (i > y) implies (forall 1<=x<y : A[x] = 0)
