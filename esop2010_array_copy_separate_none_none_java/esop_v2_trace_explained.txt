@@ -1,5 +1,4 @@
 esop_v2.smt2
-Interesting observation: one thing which could be improved is to use an existentially quantified value instead of the concrete values used here. Would this already require Vampire in order to get generated?
 
 LEVEL 2:
 CTI at level 0: (and (1236 < N) (A[1236] < B[1236])) (call this CTI1)

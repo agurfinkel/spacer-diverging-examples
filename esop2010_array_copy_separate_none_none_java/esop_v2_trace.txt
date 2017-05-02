@@ -1,5 +1,6 @@
 #esop_v2_trace produced by
 ./z3 -v:1 -st fixedpoint.print_statistics=true fixedpoint.xform.slice=false fixedpoint.xform.inline_linear=false fixedpoint.xform.inline_eager=false fixedpoint.xform.tail_simplifier_pve=false fixedpoint.engine=spacer  fixedpoint.pdr.validate_result=true fixedpoint.spacer.eq_prop=true  ~/repos/diverging-examples/esop2010_array_copy_separate_none_none_java/esop_v2.smt2  -tr:spacer.expand-add
+# misses option fixedpoint.spacer.ground_cti=false, with the option added spacer terminates immediately
 
 ;; Location (i tmp N A B)
 i = i
