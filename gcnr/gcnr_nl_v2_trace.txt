@@ -1,0 +1,2370 @@
+# gcnr_nl_v2_trace.txt
+
+# generated using command line: ./z3 -v:1 -st fixedpoint.print_statistics=true fixedpoint.xform.slice=false fixedpoint.xform.inline_linear=false fixedpoint.xform.inline_eager=false fixedpoint.xform.tail_simplifier_pve=false fixedpoint.engine=spacer  fixedpoint.pdr.validate_result=true fixedpoint.spacer.eq_prop=true fixedpoint.spacer.ground_cti=false   ~/repos/diverging-examples/gcnr/gcnr_nl_v2.smt2  -tr:spacer.expand-add
+
+# used (L x y z w)
+
+
+expand-node: query level: 0 depth: 0
+true
+
+add-lemma: 0 query!0 false
+
+
+* LEVEL 1
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: query level: 0 depth: 0
+true
+
+add-lemma: 0 E false
+
+expand-node: query level: 1 depth: 0
+true
+
+add-lemma: 1 query!0 false
+
+
+* LEVEL 2
+expand-node: query level: 2 depth: 0
+true
+
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: query level: 0 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 0 L (<= x 0.0)
+
+expand-node: query level: 1 depth: 0
+true
+
+add-lemma: 1 E false
+
+expand-node: query level: 2 depth: 0
+true
+
+add-lemma: 2 query!0 false
+
+
+* LEVEL 3
+expand-node: query level: 3 depth: 0
+true
+
+expand-node: query level: 2 depth: 0
+true
+
+expand-node: query level: 1 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 1 L (not (>= x 4.0))
+
+expand-node: query level: 2 depth: 0
+true
+
+add-lemma: 2 E false
+
+expand-node: query level: 3 depth: 0
+true
+
+add-lemma: 3 query!0 false
+
+
+* LEVEL 4
+expand-node: query level: 4 depth: 0
+true
+
+expand-node: query level: 3 depth: 0
+true
+
+expand-node: query level: 2 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 1 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 1 L (not (>= x 3.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 2 L (not (>= x 4.0))
+
+expand-node: query level: 3 depth: 0
+true
+
+add-lemma: 3 E false
+
+expand-node: query level: 4 depth: 0
+true
+
+add-lemma: 4 query!0 false
+
+
+* LEVEL 5
+expand-node: query level: 5 depth: 0
+true
+
+expand-node: query level: 4 depth: 0
+true
+
+expand-node: query level: 3 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 2 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 1 L (not (>= x 2.0))
+
+expand-node: query level: 2 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 2 L (not (>= x 3.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 3 L (not (>= x 4.0))
+
+expand-node: query level: 4 depth: 0
+true
+
+add-lemma: 4 E false
+
+expand-node: query level: 5 depth: 0
+true
+
+add-lemma: 5 query!0 false
+
+
+* LEVEL 6
+expand-node: query level: 6 depth: 0
+true
+
+expand-node: query level: 5 depth: 0
+true
+
+expand-node: query level: 4 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 3 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 0 depth: 0
+(and (>= x 0.0) (<= y (- 398.0)))
+
+add-lemma: 0 L (>= y 0.0)
+
+expand-node: query level: 1 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+add-lemma: 1 L (or (<= x 0.0) (>= y 0.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 2 L (or (>= y 0.0) (not (>= x 2.0)))
+
+expand-node: query level: 3 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 3 L (or (>= y 0.0) (not (>= x 3.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 4 L (or (not (>= x 4.0)) (not (<= y 2.0)))
+
+expand-node: query level: 5 depth: 0
+true
+
+add-lemma: 5 E false
+
+expand-node: query level: 6 depth: 0
+true
+
+add-lemma: 6 query!0 false
+
+
+* LEVEL 7
+expand-node: query level: 7 depth: 0
+true
+
+expand-node: query level: 6 depth: 0
+true
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 4 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y (- 2.0)))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 1.0)
+     (>= y (- 102.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0))))
+
+expand-node: query level: 0 depth: 0
+(and (>= x 0.0)
+     (not (<= (+ y (* (- 10.0) w)) (- 270.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 270.0))
+     (>= y (- 202.0)))
+
+add-lemma: 0 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0)))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 1.0)
+     (>= y (- 102.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0))))
+
+add-lemma: 1 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y (- 2.0)))
+
+add-lemma: 2 L (or (not (>= x 2.0)) (<= (+ z (* (- 100.0) x)) 0.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+add-lemma: 3 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 4 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 0.0) (<= y (- 398.0)))
+
+expand-node: query level: 0 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 398.0))
+
+add-lemma: 0 L (<= y 2.0)
+
+expand-node: query level: 1 depth: 0
+(and (>= x 0.0) (<= y (- 398.0)))
+
+add-lemma: 1 L (not (<= y (- 298.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+add-lemma: 1 L (not (>= y 298.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+add-lemma: 2 L (not (<= y (- 298.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+add-lemma: 2 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 3 L (or (not (>= x 2.0)) (not (<= y (- 198.0))))
+
+expand-node: query level: 4 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 4 L (or (not (<= y (- 98.0))) (not (>= x 3.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+add-lemma: 4 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 5 L (or (not (>= x 4.0)) (not (<= y 2.0)))
+
+expand-node: query level: 6 depth: 0
+true
+
+add-lemma: 6 E false
+
+expand-node: query level: 7 depth: 0
+true
+
+add-lemma: 7 query!0 false
+
+
+* LEVEL 8
+expand-node: query level: 8 depth: 0
+true
+
+expand-node: query level: 7 depth: 0
+true
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 5 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+add-lemma: 1 L (not (>= y 198.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+add-lemma: 2 L (not (>= y 298.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+add-lemma: 3 L (not (<= y (- 298.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (>= y (- 2.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0))))
+
+expand-node: query level: 0 depth: 0
+(and (<= y 2.0)
+     (>= x 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 170.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 170.0)))
+
+add-lemma: 0 L (<= (+ z (* (- 100.0) x)) 0.0)
+
+expand-node: query level: 1 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (>= y (- 2.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0))))
+
+add-lemma: 1 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 1 depth: 0
+(and (not (>= x 4.0))
+     (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0))))
+
+add-lemma: 1 L (or (not (>= x 1.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+add-lemma: 2 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 2 L (or (not (>= x 2.0)) (<= (+ z (* (- 100.0) x)) (- 90.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+add-lemma: 3 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 4 L (or (not (>= x 2.0)) (not (<= y (- 198.0))))
+
+expand-node: query level: 5 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 3 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+add-lemma: 4 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 5 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 5 L (or (not (<= y (- 98.0))) (not (>= x 3.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 4 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+add-lemma: 5 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 6 L (or (not (>= x 4.0)) (not (<= y 2.0)))
+
+expand-node: query level: 7 depth: 0
+true
+
+add-lemma: 7 E false
+
+expand-node: query level: 8 depth: 0
+true
+
+add-lemma: 8 query!0 false
+
+
+* LEVEL 9
+expand-node: query level: 9 depth: 0
+true
+
+expand-node: query level: 8 depth: 0
+true
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 6 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 0.0)
+     (<= y (- 198.0))
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 80.0))))
+
+add-lemma: 1 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+add-lemma: 2 L (or (not (>= y 198.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0))
+    (not (>= z 90.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+add-lemma: 3 L (or (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0))
+    (not (>= y 298.0))
+    (not (>= z 100.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+add-lemma: 4 L (or (not (>= x 1.0)) (not (<= y (- 298.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 2 depth: 0
+(and (<= y (- 98.0))
+     (>= x 1.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 80.0))))
+
+add-lemma: 2 L (or (>= y 0.0)
+    (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 2 depth: 0
+(and (not (>= x 4.0))
+     (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0))))
+
+add-lemma: 2 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+add-lemma: 3 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 3 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+add-lemma: 4 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 5 L (or (not (>= x 2.0)) (not (<= y (- 198.0))))
+
+expand-node: query level: 6 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 3 L (or (not (>= x 3.0)) (<= (+ z (* (- 100.0) x)) (- 90.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 4 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+add-lemma: 5 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 6 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 6 L (or (not (<= y (- 98.0))) (not (>= x 3.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 4 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 5 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+add-lemma: 6 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 7 L (or (not (>= x 4.0)) (not (<= y 2.0)))
+
+expand-node: query level: 8 depth: 0
+true
+
+add-lemma: 8 E false
+
+expand-node: query level: 9 depth: 0
+true
+
+add-lemma: 9 query!0 false
+
+
+* LEVEL 10
+expand-node: query level: 10 depth: 0
+true
+
+expand-node: query level: 9 depth: 0
+true
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y (- 102.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0)))
+     (>= y (- 202.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (not (<= (+ y (* (- 10.0) w)) (- 270.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 270.0))
+     (>= y (- 302.0)))
+
+add-lemma: 4 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 270.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0)))
+     (>= y (- 202.0)))
+
+add-lemma: 5 L (or (not (>= x 2.0))
+    (not (<= (+ x (* (- (/ 1.0 100.0)) z)) (- (/ 9.0 5.0)))))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y (- 102.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+add-lemma: 6 L (or (not (>= x 3.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 4 L (or (not (>= x 4.0)) (<= (+ z (* (- 100.0) x)) (- 90.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 5 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 6 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+add-lemma: 7 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 7 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0) (<= y (- 398.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 398.0))
+
+add-lemma: 3 L (not (>= y 398.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0) (<= y (- 398.0)))
+
+add-lemma: 4 L (not (<= y (- 398.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+expand-node: query level: 1 depth: 0
+(and (>= x 0.0)
+     (<= y (- 198.0))
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 70.0)))
+     (not (>= (+ z (* (- 100.0) x)) 80.0)))
+
+add-lemma: 1 L (not (<= y (- 198.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+add-lemma: 2 L (or (<= (+ z (* (- 100.0) x)) 0.0) (not (>= y 198.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 3 L (or (not (>= y 298.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 0.0)
+     (<= y (- 198.0))
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 80.0))))
+
+add-lemma: 2 L (not (<= y (- 198.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+add-lemma: 3 L (or (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0)))
+    (not (>= y 198.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+add-lemma: 4 L (or (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)) (not (>= y 298.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+add-lemma: 5 L (not (<= y (- 298.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (>= (+ z (* (- 100.0) x)) 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 70.0))))
+
+add-lemma: 2 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 3 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+add-lemma: 3 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 4 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+add-lemma: 4 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+add-lemma: 5 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 6 L (or (not (>= x 2.0)) (not (<= y (- 198.0))))
+
+expand-node: query level: 7 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 4 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 5 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+add-lemma: 6 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 7 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 7 L (or (not (<= y (- 98.0))) (not (>= x 3.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 8 L (or (not (>= x 4.0)) (not (<= y 2.0)))
+
+expand-node: query level: 9 depth: 0
+true
+
+add-lemma: 9 E false
+
+expand-node: query level: 10 depth: 0
+true
+
+add-lemma: 10 query!0 false
+
+
+* LEVEL 11
+expand-node: query level: 11 depth: 0
+true
+
+expand-node: query level: 10 depth: 0
+true
+
+expand-node: query level: 9 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 5 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 6 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 7 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y (- 102.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0)))
+     (>= y (- 202.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (not (<= (+ y (* (- 10.0) w)) (- 270.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 270.0))
+     (>= y (- 302.0)))
+
+add-lemma: 5 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 270.0))))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0)))
+     (>= y (- 202.0)))
+
+add-lemma: 6 L (or (not (>= x 2.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y (- 102.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+add-lemma: 7 L (or (not (>= x 3.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+add-lemma: 8 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 9 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 8 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 4 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 5 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 6 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y (- 2.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y (- 102.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0))))
+
+add-lemma: 5 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y (- 2.0)))
+
+add-lemma: 6 L (or (not (>= x 2.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+add-lemma: 7 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 8 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+expand-node: query level: 2 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (not (<= (+ y (* (- 10.0) w)) (- 60.0)))
+     (not (>= (+ z (* (- 100.0) x)) 70.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 60.0)))
+
+add-lemma: 2 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 10.0))))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 3 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (>= (+ z (* (- 100.0) x)) 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 70.0))))
+
+add-lemma: 3 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 4 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 170.0))
+     (not (>= (+ z (* (- 100.0) x)) 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 170.0))))
+
+add-lemma: 3 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 170.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+add-lemma: 4 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 5 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (>= y (- 2.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0))))
+
+add-lemma: 4 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+add-lemma: 5 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+add-lemma: 6 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 3 L (or (not (>= y 298.0)) (<= (+ z (* (- 100.0) x)) (- 90.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+add-lemma: 3 L (or (not (>= y 198.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 4 L (or (not (>= y 298.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (<= y (- 198.0))
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 80.0))))
+
+add-lemma: 3 L (or (not (<= y (- 198.0)))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+add-lemma: 4 L (or (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0)))
+    (not (>= y 198.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+add-lemma: 5 L (or (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)) (not (>= y 298.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+add-lemma: 6 L (not (<= y (- 298.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 7 L (or (not (>= x 2.0)) (not (<= y (- 198.0))))
+
+expand-node: query level: 8 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 8 L (or (not (<= y (- 98.0))) (not (>= x 3.0)))
+
+expand-node: query level: 9 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 9 L (or (not (>= x 4.0)) (not (<= y 2.0)))
+
+expand-node: query level: 10 depth: 0
+true
+
+add-lemma: 10 E false
+
+expand-node: query level: 11 depth: 0
+true
+
+add-lemma: 11 query!0 false
+
+
+* LEVEL 12
+expand-node: query level: 12 depth: 0
+true
+
+expand-node: query level: 11 depth: 0
+true
+
+expand-node: query level: 10 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 9 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 30.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)
+     (not (<= (+ y (* (- 10.0) w)) 40.0)))
+
+add-lemma: 5 L (or (not (>= x 4.0)) (<= (+ z (* (- 100.0) x)) (- 80.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 6 L (or (not (>= x 4.0)) (<= (+ z (* (- 100.0) x)) (- 70.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 7 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 4.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 8 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 9 depth: 0
+(and (>= x 4.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y (- 2.0)))
+
+add-lemma: 9 L (or (not (>= x 4.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 10 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 9 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 30.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)
+     (not (<= (+ y (* (- 10.0) w)) 40.0)))
+
+add-lemma: 4 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 5 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 6 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 7 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+add-lemma: 8 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 9 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 30.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)
+     (not (<= (+ y (* (- 10.0) w)) 40.0)))
+
+add-lemma: 3 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (not (<= (+ y (* (- 10.0) w)) (- 60.0)))
+     (not (>= (+ z (* (- 100.0) x)) 70.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 60.0)))
+
+add-lemma: 3 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 60.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 4 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (>= (+ z (* (- 100.0) x)) 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 70.0))))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (>= y (- 2.0))
+     (not (>= (+ z (* (- 100.0) x)) 170.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 160.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 160.0))))
+
+add-lemma: 3 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 100.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (>= (+ z (* (- 100.0) x)) 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 70.0))))
+
+add-lemma: 4 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 5 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (>= y (- 2.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 170.0))
+     (not (>= (+ z (* (- 100.0) x)) 180.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 170.0))))
+
+add-lemma: 4 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 160.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+add-lemma: 5 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 2.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 6 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0))
+     (>= y (- 2.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 180.0))))
+
+add-lemma: 5 L (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 180.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0))))
+
+add-lemma: 6 L (or (not (>= x 1.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 2.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 198.0))
+
+add-lemma: 7 L (or (not (>= x 2.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (>= (+ z (* (- 100.0) x)) 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 70.0))))
+
+add-lemma: 3 L (or (not (>= y 198.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 4 L (or (not (>= y 298.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (<= y (- 198.0))
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 70.0)))
+     (not (>= (+ z (* (- 100.0) x)) 80.0)))
+
+add-lemma: 3 L (or (not (<= y (- 198.0)))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 80.0)))
+     (not (>= (+ z (* (- 100.0) x)) 90.0)))
+
+add-lemma: 4 L (or (not (>= y 198.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 5 L (or (not (>= y 298.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (<= y (- 198.0))
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 80.0))))
+
+add-lemma: 4 L (or (not (<= y (- 198.0)))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 80.0))))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 0.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 90.0)))
+     (>= y 198.0))
+
+add-lemma: 5 L (or (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 90.0)))
+    (not (>= y 198.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+add-lemma: 6 L (or (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)) (not (>= y 298.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+add-lemma: 7 L (not (<= y (- 298.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+add-lemma: 8 L (or (not (>= x 2.0)) (not (<= y (- 198.0))))
+
+expand-node: query level: 9 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+add-lemma: 9 L (or (not (<= y (- 98.0))) (not (>= x 3.0)))
+
+expand-node: query level: 10 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+add-lemma: 10 L (or (not (>= x 4.0)) (not (<= y 2.0)))
+
+expand-node: query level: 11 depth: 0
+true
+
+add-lemma: 11 E false
+
+expand-node: query level: 12 depth: 0
+true
+
+add-lemma: 12 query!0 false
+
+
+* LEVEL 13
+expand-node: query level: 13 depth: 0
+true
+
+expand-node: query level: 12 depth: 0
+true
+
+expand-node: query level: 11 depth: 0
+(and (>= x 4.0) (<= y 2.0))
+
+expand-node: query level: 10 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 9 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 30.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)
+     (not (<= (+ y (* (- 10.0) w)) 40.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 40.0)))
+     (not (<= (+ y (* (- 10.0) w)) 50.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 50.0))
+
+add-lemma: 4 L (or (not (>= x 3.0)) (<= (+ z (* (- 100.0) x)) (- 70.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 30.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)
+     (not (<= (+ y (* (- 10.0) w)) 40.0)))
+
+add-lemma: 5 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 40.0)))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 6 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+add-lemma: 7 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+add-lemma: 8 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)))
+
+expand-node: query level: 9 depth: 0
+(and (>= x 3.0)
+     (>= y 98.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0)))
+
+add-lemma: 9 L (or (not (>= x 3.0)) (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)))
+
+expand-node: query level: 10 depth: 0
+(and (<= y (- 98.0)) (>= x 3.0))
+
+expand-node: query level: 9 depth: 0
+(and (>= x 2.0) (<= y (- 198.0)))
+
+expand-node: query level: 8 depth: 0
+(and (>= x 1.0) (<= y (- 298.0)))
+
+expand-node: query level: 7 depth: 0
+(and (>= x 1.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 0.0)
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (>= y 298.0))
+
+expand-node: query level: 6 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 10.0)
+     (not (>= (+ z (* (- 100.0) x)) 0.0))
+     (not (<= (+ y (* (- 10.0) w)) 10.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (not (<= (+ y (* (- 10.0) w)) (- 60.0)))
+     (not (>= (+ z (* (- 100.0) x)) 70.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 60.0)))
+
+add-lemma: 3 L (or (not (>= y 198.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 60.0))))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 20.0)))
+     (not (<= (+ y (* (- 10.0) w)) 30.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0))
+
+add-lemma: 4 L (or (not (>= y 298.0))
+    (not (<= (+ (* (- 1.0) z) (* 100.0 x)) 30.0)))
+
+expand-node: query level: 5 depth: 0
+(and (>= x 1.0)
+     (>= y 298.0)
+     (not (>= (+ z (* (- 100.0) x)) (- 10.0)))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) 20.0)
+     (not (<= (+ y (* (- 10.0) w)) 20.0)))
+
+expand-node: query level: 4 depth: 0
+(and (>= x 0.0)
+     (>= y 198.0)
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 70.0))
+     (not (>= (+ z (* (- 100.0) x)) 80.0))
+     (not (<= (+ y (* (- 10.0) w)) (- 70.0))))
+
+expand-node: query level: 3 depth: 0
+(and (>= x 0.0)
+     (<= y (- 198.0))
+     (not (<= (+ y (* (- 10.0) w)) 0.0))
+     (not (>= (+ z (* (- 100.0) x)) 70.0))
+     (<= (+ (* (- 1.0) z) (* 100.0 x)) (- 60.0))
+     (not (<= (+ (* (- 10.0) w) (* (- 1.0) y)) (- 60.0))))
+
