@@ -1,0 +1,58 @@
+esop_completely_rewritten.smt2
+
+LEVEL 3
+CTI at level 1: (and (j < N) (A[j] > B[j]))
+CTI at level 0: (and (i >= N) (N > 0) (A[0] > B[0]))
+Lemma at level 0: (i <= 0)
+Lemma at level 1: (j >= N)
+
+LEVEL 4 (0,0 (i.e. CTIs: 0x second loop, 0x first loop))
+CTI at level 2: (and (j < N) (A[j] > B[j]))
+CTI at level 1: (and (i >= N) (N > 0) (A[0] > B[0]))
+Lemma at level 1: (=> (i > 0) (A[0] = B[0]))
+Lemma at level 2: (=> (j < N) (A[j] = B[j]))
+
+LEVEL 5 (1,0)
+CTI at level 3: (and (j < N) (A[j] > B[j]))
+CTI at level 2: (and (j+1 < N) (A[j+1] > B[j+1]))
+CTI at level 1: (and (i >= N) (N > 1) (A[1] > B[1]))
+Lemma at level 1: (i <= 1)
+Lemma at level 2: (j+1 >= N)
+Lemma at level 3: (=> (j < N) (A[j] = B[j])
+
+LEVEL 6 (1,0)
+CTI at level 4: (and (j < N) (A[j] > B[j]))
+CTI at level 3: (and (j+1 < N) (A[j+1] > B[j+1]))
+CTI at level 2: (and (i >= N) (N > 1) (A[1] > B[1]) )
+Lemma at level 2: (=> (and (i >= N) (N > 1)) (A[1] <= B[1])))
+Lemma at level 3: (=> (j+1 < N) (A[j+1] <= B[j+1]))
+Lemma at level 4: (=> (j < N) (A[j] <= B[j]))
+
+LEVEL 7 (1,1 and 2,0)
+CTI at level 5: (and (j < N) (A[j] > B[j]))
+CTI at level 4: (and (j+1 < N) (A[j+1] > B[j+1]))
+CTI at level 3: (and (i >= N) (N > 1) (A[1] > B[1]))
+CTI at level 2: (and (i < N) (i+1 >= N) (N > 1) (i != 1) (A[1] > B[1]))
+Lemma at level 2: (=> (and (i > 0) (i != 1)) (A[1] <= B[1]))
+Lemma at level 3: (=> (and (N > 1) (i >= N)) (A[1] <= B[1]))
+
+CTI at level 3: (and (j+2 < N) (A[j+2] > B[j+2]))
+CTI at level 2: (and (i >= N) (N > 2) (A[2] > B[2]))
+Lemma at level 2: (i <= 2)
+Lemma at level 3: (j+2 >= N)
+Lemma at level 4: (=> (j+1 < N) (A[j+1] <= B[j+1])
+Lemma at level 5: (=> (j < N) (A[j] <= B[j]))
+
+In general:
+Important path it explores:
+CTI: (and (j < N) (A[j] > B[j]))
+CTI: (and (j+1 < N) (A[j+1] > B[j+1]))
+…
+CTI at level c+1: (and (j+c < N) (A[j+c] > B[j+c]))
+CTI at level c: (and (i >= N (N > c) (A[c] > B[c])))
+Lemma at level c: (i <= c)
+Lemma at level c+1: (j+c >= N)
+Lemma at level c+2: (=> (j + (c-1) < N) (A[j + (c-1)] <= B[j + (c-1)]))
+…
+Lemma at max_level - 3: (=> (j + 1 < N) (A[j + 1] <= B[j + 1]))
+Lemma at max_level - 2: (=> (j < N) (A[j] <= B[j]))
