@@ -1,0 +1,1424 @@
+# aws.smt2
+
+# diverging command line: ./z3 -v:1 -st fixedpoint.print_statistics=true fixedpoint.xform.slice=false fixedpoint.xform.inline_linear=false fixedpoint.xform.inline_eager=false fixedpoint.xform.tail_simplifier_pve=false fixedpoint.engine=spacer  fixedpoint.pdr.validate_result=true fixedpoint.spacer.eq_prop=true fixedpoint.spacer.ground_cti=false   ~/repos/diverging-examples/aws/aws.smt2  -tr:spacer.expand-add
+
+expand-node: query level: 0 depth: 0
+true
+
+add-lemma: 0 query!0 false
+
+
+* LEVEL 1
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: query level: 0 depth: 0
+true
+
+add-lemma: 0 error false
+
+expand-node: query level: 1 depth: 0
+true
+
+add-lemma: 1 query!0 false
+
+
+* LEVEL 2
+expand-node: query level: 2 depth: 0
+true
+
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: query level: 0 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+
+add-lemma: 0 inv (<= inv_4_n 0)
+
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: query level: 0 depth: 0
+(and inv_10_n
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (<= inv_19_n 0)
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (<= inv_6_n 0))
+
+add-lemma: 0 inv (not inv_10_n)
+
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: query level: 0 depth: 0
+(and (<= inv_19_n 0)
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (<= inv_6_n 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 0 inv (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2))
+
+expand-node: query level: 1 depth: 0
+true
+
+expand-node: query level: 0 depth: 0
+(and (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (<= inv_19_n 0)
+     (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (<= inv_6_n 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n))
+
+add-lemma: 0 inv (<= (+ inv_12_n (* (- 1) inv_21_n)) 2)
+
+expand-node: query level: 1 depth: 0
+true
+
+add-lemma: 1 error false
+
+expand-node: query level: 2 depth: 0
+true
+
+add-lemma: 2 query!0 false
+
+
+* LEVEL 3
+expand-node: query level: 3 depth: 0
+true
+
+expand-node: query level: 2 depth: 0
+true
+
+expand-node: query level: 1 depth: 0
+(and (<= inv_19_n 0)
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (<= inv_6_n 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 0 depth: 0
+(and (<= inv_19_n 0)
+     (<= inv_6_n 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2))))
+
+add-lemma: 0 inv (or (not (<= inv_6_n 0)) (>= (+ inv_4_n (* (- 1) inv_6_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and (<= inv_19_n 0)
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (<= inv_6_n 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 1 inv (or (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)) (not (<= inv_6_n 0)))
+
+expand-node: query level: 2 depth: 0
+true
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 0 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n)))
+    2)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 1 inv (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2))
+
+expand-node: query level: 2 depth: 0
+true
+
+expand-node: query level: 1 depth: 0
+(and (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n))
+
+expand-node: query level: 0 depth: 0
+(and (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n)))
+              (- 2))))
+
+add-lemma: 0 inv (<= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n)))
+    2)
+
+expand-node: query level: 1 depth: 0
+(and (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n))
+
+add-lemma: 1 inv (<= (+ inv_12_n (* (- 1) inv_21_n)) 2)
+
+expand-node: query level: 2 depth: 0
+true
+
+add-lemma: 2 error false
+
+expand-node: query level: 3 depth: 0
+true
+
+add-lemma: 3 query!0 false
+
+
+* LEVEL 4
+expand-node: query level: 4 depth: 0
+true
+
+expand-node: query level: 3 depth: 0
+true
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2))))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2))
+
+add-lemma: 0 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n))
+       (select inv_18_n (+ 1 inv_17_n))
+       (* (- 1) (select inv_5_n (+ 1 inv_4_n))))
+    2)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2))))
+
+add-lemma: 1 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n)))
+    2)
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n))
+
+add-lemma: 2 inv (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2))
+
+expand-node: query level: 3 depth: 0
+true
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n)))
+              (- 2))))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n))))
+              (- 2))))
+
+add-lemma: 0 inv (<= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n))
+       (select inv_5_n (+ 1 inv_4_n))
+       (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+    2)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n)))
+              (- 2))))
+
+add-lemma: 1 inv (<= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n)))
+    2)
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n))
+
+add-lemma: 2 inv (<= (+ inv_12_n (* (- 1) inv_21_n)) 2)
+
+expand-node: query level: 3 depth: 0
+true
+
+add-lemma: 3 error false
+
+expand-node: query level: 4 depth: 0
+true
+
+add-lemma: 4 query!0 false
+
+
+* LEVEL 5
+expand-node: query level: 5 depth: 0
+true
+
+expand-node: query level: 4 depth: 0
+true
+
+expand-node: query level: 3 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 2 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2))))
+
+add-lemma: 0 inv (or (not (>= (+ inv_17_n (* (- 1) inv_19_n)) (- 1)))
+    (>= (+ inv_4_n (* (- 1) inv_6_n)) (- 1)))
+
+expand-node: query level: 1 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 1 inv (or (not inv_10_n) (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+
+expand-node: query level: 2 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2))))
+
+add-lemma: 0 inv (or (not (>= (+ inv_17_n (* (- 1) inv_19_n)) (- 2)))
+    (>= (+ inv_4_n (* (- 1) inv_6_n)) (- 2)))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 1 inv (or (not (>= (+ inv_17_n (* (- 1) inv_19_n)) (- 1)))
+    (>= (+ inv_4_n (* (- 1) inv_6_n)) (- 1)))
+
+expand-node: query level: 2 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 2 inv (or (not inv_10_n) (>= (+ inv_4_n (* (- 1) inv_6_n)) 0))
+
+expand-node: query level: 3 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2)))
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)))
+
+add-lemma: 0 inv (<= (+ inv_4_n (* (- 1) inv_17_n)) 0)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)))
+
+add-lemma: 1 inv (<= (+ inv_4_n (* (- 1) inv_17_n)) 0)
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 2 inv (<= (+ inv_4_n (* (- 1) inv_17_n)) 0)
+
+expand-node: query level: 3 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 3 inv (or (not inv_10_n)
+    (not (>= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+    (not (>= (+ inv_4_n (* (- 1) inv_6_n)) 0)))
+
+expand-node: query level: 4 depth: 0
+true
+
+expand-node: query level: 3 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)))
+
+add-lemma: 0 inv (>= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n))
+       (select inv_5_n (+ 1 inv_4_n))
+       (select inv_5_n (+ 2 inv_4_n))
+       (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+       (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+    (- 2))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 1 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n))
+       (select inv_18_n (+ 1 inv_17_n))
+       (* (- 1) (select inv_5_n (+ 1 inv_4_n))))
+    2)
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 2 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n)))
+    2)
+
+expand-node: query level: 3 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 3 inv (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2))
+
+expand-node: query level: 4 depth: 0
+true
+
+expand-node: query level: 3 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n))))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (select inv_18_n (+ 2 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n)))
+                 (* (- 1) (select inv_5_n (+ 2 inv_4_n))))
+              (- 2))))
+
+add-lemma: 0 inv (<= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n))
+       (select inv_5_n (+ 1 inv_4_n))
+       (select inv_5_n (+ 2 inv_4_n))
+       (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+       (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+    2)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n))))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 1 inv (<= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n))
+       (select inv_5_n (+ 1 inv_4_n))
+       (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+    2)
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 2 inv (<= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n)))
+    2)
+
+expand-node: query level: 3 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 3 inv (<= (+ inv_12_n (* (- 1) inv_21_n)) 2)
+
+expand-node: query level: 4 depth: 0
+true
+
+add-lemma: 4 error false
+
+expand-node: query level: 5 depth: 0
+true
+
+add-lemma: 5 query!0 false
+
+
+* LEVEL 6
+expand-node: query level: 6 depth: 0
+true
+
+expand-node: query level: 5 depth: 0
+true
+
+expand-node: query level: 4 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 3 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2))))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 3))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 4)
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (select inv_5_n (+ 3 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 3 inv_17_n))))
+              (- 2))))
+
+add-lemma: 0 inv (<= (+ inv_17_n (* (- 1) inv_4_n)) 0)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2))))
+
+add-lemma: 1 inv (<= (+ inv_17_n (* (- 1) inv_4_n)) 0)
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 2 inv (<= (+ inv_17_n (* (- 1) inv_4_n)) 0)
+
+expand-node: query level: 3 depth: 0
+(and inv_10_n
+     (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 3 inv (or (not inv_10_n)
+    (not (<= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+    (>= (+ inv_4_n (* (- 1) inv_6_n)) 0))
+
+expand-node: query level: 4 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 3 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 3))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 3))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 4)
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (select inv_5_n (+ 3 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 3 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 4))
+
+add-lemma: 0 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n))
+       (select inv_18_n (+ 1 inv_17_n))
+       (select inv_18_n (+ 2 inv_17_n))
+       (select inv_18_n (+ 3 inv_17_n))
+       (* (- 1) (select inv_5_n (+ 1 inv_4_n)))
+       (* (- 1) (select inv_5_n (+ 2 inv_4_n)))
+       (* (- 1) (select inv_5_n (+ 3 inv_4_n))))
+    2)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)))
+
+add-lemma: 1 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n))
+       (select inv_18_n (+ 1 inv_17_n))
+       (select inv_18_n (+ 2 inv_17_n))
+       (* (- 1) (select inv_5_n (+ 1 inv_4_n)))
+       (* (- 1) (select inv_5_n (+ 2 inv_4_n))))
+    2)
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n))))
+              (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 2 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n))
+       (select inv_18_n (+ 1 inv_17_n))
+       (* (- 1) (select inv_5_n (+ 1 inv_4_n))))
+    2)
+
+expand-node: query level: 3 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n)))
+              (- 2)))
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 3 inv (<= (+ inv_21_n
+       (* (- 1) inv_12_n)
+       (select inv_18_n inv_17_n)
+       (* (- 1) (select inv_5_n inv_4_n)))
+    2)
+
+expand-node: query level: 4 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0))
+
+add-lemma: 4 inv (>= (+ inv_12_n (* (- 1) inv_21_n)) (- 2))
+
+expand-node: query level: 5 depth: 0
+true
+
+expand-node: query level: 4 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (>= (+ inv_21_n (* (- 1) inv_12_n)) (- 2)))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 0)
+     (not inv_0_n)
+     (not inv_13_n))
+
+expand-node: query level: 3 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 1)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 1)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 0))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n)))
+              (- 2))))
+
+expand-node: query level: 2 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 1))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 1))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 2)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 2)
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n))))
+              (- 2))))
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (select inv_18_n (+ 2 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n)))
+                 (* (- 1) (select inv_5_n (+ 2 inv_4_n))))
+              (- 2))))
+
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 3))
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 3))
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 4)
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 4)
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (select inv_18_n (+ 2 inv_17_n))
+                 (select inv_18_n (+ 3 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n)))
+                 (* (- 1) (select inv_5_n (+ 2 inv_4_n)))
+                 (* (- 1) (select inv_5_n (+ 3 inv_4_n))))
+              (- 2))))
+
+add-lemma: 0 inv (<= (+ inv_12_n
+       (* (- 1) inv_21_n)
+       (select inv_5_n inv_4_n)
+       (* (- 1) (select inv_18_n inv_17_n))
+       (select inv_5_n (+ 1 inv_4_n))
+       (select inv_5_n (+ 2 inv_4_n))
+       (select inv_5_n (+ 3 inv_4_n))
+       (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+       (* (- 1) (select inv_18_n (+ 2 inv_17_n)))
+       (* (- 1) (select inv_18_n (+ 3 inv_17_n))))
+    2)
+
+expand-node: query level: 1 depth: 0
+(and (not (<= inv_6_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 3)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 2))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 3)
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 2))
+     (not (>= (+ inv_21_n
+                 (* (- 1) inv_12_n)
+                 (select inv_18_n inv_17_n)
+                 (* (- 1) (select inv_5_n inv_4_n))
+                 (select inv_18_n (+ 1 inv_17_n))
+                 (select inv_18_n (+ 2 inv_17_n))
+                 (* (- 1) (select inv_5_n (+ 1 inv_4_n)))
+                 (* (- 1) (select inv_5_n (+ 2 inv_4_n))))
+              (- 2))))
+

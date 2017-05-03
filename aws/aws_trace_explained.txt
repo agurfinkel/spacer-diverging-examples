@@ -1,0 +1,53 @@
+aws.smt2
+LEVEL 2:
+Lemma on level 0: inv_4 <= 0
+Lemma on level 0: not inv_10
+
+Lemma on level 0: inv_12 + 2 >=  inv_21
+Lemma on level 0: inv_12 <=  inv_21 + 2
+
+LEVEL 3:
+Lemma on level 0: (inv_6 <= 0) implies (inv_4 >= inv_6)
+Lemma on level 1: (inv_6 <= 0) implies (inv_12 >= inv_21)
+
+Lemma on level 0: (inv_21 + inv_18[inv_17] - inv_5[inv_4] <= inv_12 + 2)
+Lemma on level 1:  (inv_12 + 2 >=  inv_21)
+
+Lemma on level 0: (inv_12 + inv_5[inv_4] - inv_18[inv_17] <= inv_21 + 2 )
+Lemma on level 1: (inv_12 <= inv_21 + 2)
+
+LEVEL 4:
+Lemma on level 0: (inv_21 + inv_18[inv_17] - inv_5[inv_4] + inv_18[inv_17+1] - inv_5[inv_4+1] <= inv_12 + 2)
+Lemma on level 1: (inv_21 + inv_18[inv_17] - inv_5[inv_4] <= inv_12 + 2)
+Lemma on level 2: (inv_21 <= inv_12 + 2)
+
+Lemma on level 0:  (inv_12 - 2 <= inv_21 + inv_18[inv_17] - inv_5[inv_4] + inv_18[inv_17+1] - inv_5[inv_4+1])
+Lemma on level 1: (inv_12 - 2 <= inv_21 + inv_18[inv_17] - inv_5[inv_4])
+Lemma on level 2: (inv_12 - 2 <= inv_21)
+
+
+CTIs are of the form:
+expand-node: query level: 0 depth: 0
+(and (not (<= inv_6_n 0))
+     (not (<= inv_19_n 0))
+     (not inv_10_n)
+     (not inv_0_n)
+     (not inv_13_n)
+     (= (+ inv_6_n (* (- 1) inv_19_n)) 0)
+     (not (<= (+ inv_6_n (* (- 1) inv_4_n)) 4))
+     (not (<= (+ inv_19_n (* (- 1) inv_17_n)) 4))
+     (<= (+ inv_19_n (* (- 1) inv_17_n)) 5)
+     (<= (+ inv_6_n (* (- 1) inv_4_n)) 5)
+     (not (>= (+ inv_12_n
+                 (* (- 1) inv_21_n)
+                 (select inv_5_n inv_4_n)
+                 (* (- 1) (select inv_18_n inv_17_n))
+                 (select inv_5_n (+ 1 inv_4_n))
+                 (select inv_5_n (+ 2 inv_4_n))
+                 (select inv_5_n (+ 3 inv_4_n))
+                 (select inv_5_n (+ 4 inv_4_n))
+                 (* (- 1) (select inv_18_n (+ 1 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 2 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 3 inv_17_n)))
+                 (* (- 1) (select inv_18_n (+ 4 inv_17_n))))
+              (- 2))))
