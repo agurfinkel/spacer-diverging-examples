@@ -4,6 +4,11 @@
 ;; eq_prop=false the right lemmas are found singificantly faster.
 ;; See the logs for additional comments
 
+;; NOTE: using OLD interpolation code. Had to hardcode the choice 
+;; in the binary. Have not tried with NEW interpolation code. NEW code 
+;; did not work for the non-simplified example, but I have not tried 
+;; it here.
+
 ;; /ag/z3/quic/debug/z3 -v:1 -st fixedpoint.print_statistics=true fixedpoint.xform.slice=false fixedpoint.xform.inline_linear=true fixedpoint.xform.inline_eager=true fixedpoint.xform.tail_simplifier_pve=false fixedpoint.engine=spacer  fixedpoint.pdr.validate_result=true fixedpoint.spacer.eq_prop=false  julien1.simp.smt2 -tr:spacer.expand-add 2>&1 | tee /tmp/out.log
 ;; 
 (set-logic HORN)
