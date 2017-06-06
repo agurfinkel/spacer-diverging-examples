@@ -1,0 +1,968 @@
+(transform N7datalog13mk_coi_filterE...no-op 0s)
+(transform N7datalog25mk_interp_tail_simplifierE...13 rules 0.00122345s)
+(transform N7datalog27mk_quantifier_instantiationE...no-op 0s)
+(transform N7datalog8mk_scaleE...no-op 0s)
+(transform N7datalog18mk_karr_invariantsE...no-op 0s)
+(transform N7datalog14mk_array_blastE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...5 rules 0.0200995s)
+(transform N7datalog12mk_bit_blastE...no-op 0s)
+(transform N7datalog13mk_coi_filterE...no-op 0s)
+(transform N7datalog25mk_interp_tail_simplifierE...5 rules 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog13mk_coi_filterE...no-op 0s)
+(transform N7datalog25mk_interp_tail_simplifierE...5 rules 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+(transform N7datalog15mk_rule_inlinerE...no-op 0s)
+(transform N7datalog22mk_subsumption_checkerE...no-op 0s)
+non-diff: (select (:var 8) (:var 9))
+non-utvpi: (select (:var 8) (:var 9))
+expand: query!0 (0, 0) FAR  w(0) 1. F 0.01
+(spacer::context::check_reachability :time 0.01 :before-memory 2.97 :after-memory 3.34)
+Entering level 1
+BRUNCH_STAT max_query_lvl 0
+BRUNCH_STAT num_queries 0
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 1
+BRUNCH_STAT cex_depth 0
+expand: query!0 (1, 0) FAR  w(0) 1.
+	create_child: L2 (0, 1) FAR 1189 U 0.02
+expand: L2 (0, 0) FAR  w(0) 1189. F 0.01
+expand: query!0 (1, 0) FAR  w(0) 1. F 0.00
+(spacer::context::check_reachability :time 0.03 :before-memory 3.34 :after-memory 3.83)
+Propagating: 0 1  ! 2 
+(spacer::context::propagate :time 0.00 :before-memory 3.83 :after-memory 3.86)
+Entering level 2
+BRUNCH_STAT max_query_lvl 1
+BRUNCH_STAT num_queries 1
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 2
+BRUNCH_STAT cex_depth 0
+expand: query!0 (2, 0) FAR  w(0) 1.
+	create_child: L2 (1, 2) FAR 1189 U 0.02
+expand: L2 (1, 0) FAR  w(0) 1189.
+	create_child: L1 (0, 2) FAR 1655 U 0.01
+expand: L1 (0, 0) FAR  w(0) 1655. F 0.01
+expand: L2 (1, 0) FAR  w(0) 1189. F 0.01
+expand: query!0 (2, 0) FAR  w(0) 1. F 0.01
+(spacer::context::check_reachability :time 0.06 :before-memory 3.86 :after-memory 4.38)
+Propagating: 0 1 2  ! 3 
+(spacer::context::propagate :time 0.01 :before-memory 4.38 :after-memory 4.47)
+Entering level 3
+BRUNCH_STAT max_query_lvl 2
+BRUNCH_STAT num_queries 3
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 0
+BRUNCH_STAT max_depth 3
+BRUNCH_STAT cex_depth 0
+expand: query!0 (3, 0) FAR  w(0) 1.
+	create_child: L2 (2, 3) FAR 1189 U 0.02
+expand: L2 (2, 0) FAR  w(0) 1189.
+	create_child: L1 (1, 3) FAR 1655 U 0.01
+expand: L1 (1, 0) FAR  w(0) 1655. F 0.08
+expand: L2 (2, 0) FAR  w(0) 1189. F 0.05
+expand: query!0 (3, 0) FAR  w(0) 1.
+	create_child: L2 (2, 3) FAR 5329 U 0.03
+expand: L2 (2, 0) FAR  w(0) 5329.
+	create_child: L1 (1, 3) FAR 5414 U 0.01
+expand: L1 (1, 0) FAR  w(0) 5414. F 0.08
+expand: L2 (2, 0) FAR  w(0) 5329. F 0.04
+expand: query!0 (3, 0) FAR  w(0) 1. F 0.02
+(spacer::context::check_reachability :time 0.34 :before-memory 4.47 :after-memory 5.57)
+Propagating: 1 2 
+(spacer::context::propagate :time 0.06 :before-memory 5.57 :after-memory 5.67)
+(define-fun L2 ((x!0 Int) (x!1 Int) (x!2 Int) (x!3 Int) (x!4 Int) (x!5 Int)) Bool
+  (let ((a!1 (not (>= (+ x!0 (* (- 1) x!5)) 0)))
+        (a!2 (not (>= (+ x!0 (* (- 1) x!2)) 0)))
+        (a!3 (not (>= (+ x!2 (* (- 1) x!0)) 0))))
+  (let ((a!4 (or (<= (+ x!1 (* (- 1) x!3)) 0)
+                 a!1
+                 (<= (+ x!4 (* (- 1) x!0)) 0)
+                 a!2
+                 a!3))
+        (a!5 (or a!3
+                 (<= (+ x!3 (* (- 1) x!1)) 0)
+                 a!1
+                 (<= (+ x!4 (* (- 1) x!0)) 0)
+                 a!2)))
+    (and a!4 a!5))))
+(define-fun L1 ((x!0 Int) (x!1 Int) (x!2 Int) (x!3 Int) (x!4 Int) (x!5 Int)) Bool
+  (let ((a!1 (not (>= (+ x!0 (* (- 1) x!2)) 0)))
+        (a!2 (not (>= (+ x!2 (* (- 1) x!0)) 0))))
+  (let ((a!3 (or (not (>= x!0 0))
+                 (<= (+ x!3 (* (- 1) x!1)) 0)
+                 (<= (+ x!5 (* (- 1) x!0)) 0)
+                 a!1
+                 a!2))
+        (a!4 (or (<= (+ x!1 (* (- 1) x!3)) 0)
+                 (<= (+ x!5 (* (- 1) x!0)) 0)
+                 a!1
+                 a!2
+                 (not (>= x!0 0)))))
+    (and a!3 a!4))))
+    
+
+(define-fun L2 ((x!0 Int) (x!1 Int) (x!2 Int) (x!3 Int) (x!4 Int) (x!5 Int)) Bool
+  (let ((a!1 (>= (+ x!0 (* (- 1) x!5)) 0))
+        (a!2 (>= (+ x!0 (* (- 1) x!2)) 0))
+        (a!3 (>= (+ x!2 (* (- 1) x!0)) 0)))
+  (let ((a!4 (or 
+                 (not a!1)
+                 (not a!2)
+                 (not a!3))
+                 (<= (+ x!4 (* (- 1) x!0)) 0)
+                 (<= (+ x!1 (* (- 1) x!3)) 0)
+                 )
+        (a!5 (or (not a!1)
+                 (not a!2)
+                 (not a!3)
+                 (<= (+ x!4 (* (- 1) x!0)) 0)
+                 (<= (+ x!3 (* (- 1) x!1)) 0)
+                 
+                 )))
+    (and a!4 a!5))))
+    
+(define-fun L1 ((x!0 Int) (x!1 Int) (x!2 Int) (x!3 Int) (x!4 Int) (x!5 Int)) Bool
+  (let ((a!1 (>= (+ x!0 (* (- 1) x!2)) 0))
+        (a!2 (>= (+ x!2 (* (- 1) x!0)) 0)))
+  (let ((a!3 (or
+                 (not a!1)
+                 (not a!2)
+                 (not (>= x!0 0))
+                 (<= (+ x!5 (* (- 1) x!0)) 0)
+                 (<= (+ x!3 (* (- 1) x!1)) 0)
+                 
+                 ))
+        (a!4 (or
+                 (not a!1)
+                 (not a!2)
+                 (not (>= x!0 0))
+                 (<= (+ x!5 (* (- 1) x!0)) 0)
+                 (<= (+ x!1 (* (- 1) x!3)) 0)
+                 
+                 )))
+    (and a!3 a!4))))
+BRUNCH_STAT max_query_lvl 3
+BRUNCH_STAT num_queries 7
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 2
+BRUNCH_STAT max_depth 3
+BRUNCH_STAT cex_depth 0
+(:SPACER-inductive-level               2
+ :SPACER-max-depth                     3
+ :SPACER-max-query-lvl                 3
+ :SPACER-num-invariants                5
+ :SPACER-num-lemmas                    11
+ :SPACER-num-properties                8
+ :SPACER-num-queries                   7
+ :add-rows                             939
+ :added-eqs                            1738
+ :arith-conflicts                      70
+ :assert-diseq                         46
+ :assert-lower                         799
+ :assert-upper                         773
+ :bool-inductive-gen                   6
+ :bool-inductive-gen-failures          22
+ :conflicts                            128
+ :decisions                            2760
+ :del-clause                           307
+ :eq-adapter                           510
+ :final-checks                         89
+ :interface-eqs                        17
+ :minimized-lits                       6
+ :mk-bool-var                          1423
+ :mk-clause                            731
+ :num-checks                           75
+ :pivots                               308
+ :propagations                         3861
+ :time.spacer.init_rules               0.01
+ :time.spacer.init_rules.pt.init       0.00
+ :time.spacer.solve                    0.51
+ :time.spacer.solve.propagate          0.07
+ :time.spacer.solve.reach              0.44
+ :time.spacer.solve.reach.children     0.08
+ :time.spacer.solve.reach.gen.bool_ind 0.15
+ :time.virtual_solver.proof            0.05
+ :time.virtual_solver.smt.total        0.32
+ :time.virtual_solver.smt.total.sat    0.16
+ :virtual_solver.checks                75
+ :virtual_solver.checks.sat            36)
+BRUNCH_STAT max_query_lvl 3
+BRUNCH_STAT num_queries 7
+BRUNCH_STAT num_reach_queries 0
+BRUNCH_STAT num_reach_reuse 0
+BRUNCH_STAT inductive_lvl 2
+BRUNCH_STAT max_depth 3
+BRUNCH_STAT cex_depth 0
+sat
+(:SPACER-inductive-level               2
+ :SPACER-max-depth                     3
+ :SPACER-max-query-lvl                 3
+ :SPACER-num-invariants                5
+ :SPACER-num-lemmas                    11
+ :SPACER-num-properties                8
+ :SPACER-num-queries                   7
+ :add-rows                             939
+ :added-eqs                            1738
+ :arith-conflicts                      70
+ :assert-diseq                         46
+ :assert-lower                         799
+ :assert-upper                         773
+ :bool-inductive-gen                   6
+ :bool-inductive-gen-failures          22
+ :conflicts                            128
+ :decisions                            2760
+ :del-clause                           307
+ :eq-adapter                           510
+ :final-checks                         89
+ :interface-eqs                        17
+ :max-memory                           26.00
+ :memory                               11.30
+ :minimized-lits                       6
+ :mk-bool-var                          1423
+ :mk-clause                            731
+ :num-allocs                           668350
+ :num-checks                           75
+ :pivots                               308
+ :propagations                         3861
+ :rlimit-count                         317101
+ :time                                 0.63
+ :time.spacer.init_rules               0.01
+ :time.spacer.init_rules.pt.init       0.00
+ :time.spacer.solve                    0.51
+ :time.spacer.solve.propagate          0.07
+ :time.spacer.solve.reach              0.44
+ :time.spacer.solve.reach.children     0.08
+ :time.spacer.solve.reach.gen.bool_ind 0.15
+ :time.virtual_solver.proof            0.05
+ :time.virtual_solver.smt.total        0.32
+ :time.virtual_solver.smt.total.sat    0.16
+ :total-time                           0.62
+ :virtual_solver.checks                75
+ :virtual_solver.checks.sat            36)
+ast_manager LEAKED: 202
+Leaked: decl L2_5_3 :: Int
+decl L2_0_0 :: Int
+(= L2_0_0 L2_5_3)
+Leaked: decl L2_0_1 :: Int
+#4799 := (* -1::Int L2_0_1)
+decl L2_4_1 :: Int
+#4800 := (+ L2_4_1 #4799)
+(<= #4800 0::Int)
+Leaked: decl L2_3_3 :: Int
+Leaked: decl L2_3_3 :: Int
+L2_3_3
+Leaked: decl L1_1_n :: Int
+#1607 := (* -1::Int L1_1_n)
+decl L1_3_n :: Int
+#1625 := (+ L1_3_n #1607)
+#1610 := (<= #1625 0::Int)
+(not #1610)
+Leaked: decl L1_0_0 :: Int
+Leaked: decl L1_0_0 :: Int
+L1_0_0
+Leaked: decl L1_2_n :: Int
+(= L1_2_n 0::Int)
+Leaked: decl L2_1_0 :: Int
+(* -1::Int L2_1_0)
+Leaked: decl L2_2_3 :: Int
+Leaked: decl L2_2_3 :: Int
+L2_2_3
+Leaked: decl L2_5_n :: Int
+(* -1::Int L2_5_n)
+Leaked: decl L2_3_1 :: Int
+Leaked: decl L2_3_1 :: Int
+L2_3_1
+Leaked: decl L2_5_3 :: Int
+decl L2_5_2 :: Int
+(= L2_5_2 L2_5_3)
+Leaked: decl L2_3_n :: Int
+#1258 := (* -1::Int L2_3_n)
+decl L2_1_n :: Int
+#1259 := (+ L2_1_n #1258)
+#5302 := (<= #1259 0::Int)
+#5313 := (not #5302)
+decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_4_n :: Int
+#1170 := (+ L2_4_n #1195)
+#1185 := (<= #1170 0::Int)
+#1177 := (not #1185)
+decl L2_0_n :: Int
+#1123 := (+ L2_0_n #1195)
+#1167 := (= #1123 0::Int)
+decl L2_2_n :: Int
+#1100 := (+ L2_2_n #1195)
+#1166 := (= #1100 0::Int)
+(and #1166 #1167 #1177 #5313)
+Leaked: decl L1_4_0 :: Int
+Leaked: decl L1_4_0 :: Int
+L1_4_0
+Leaked: Leaked: decl L2_3_2 :: Int
+decl L2_1_3 :: Int
+#1080 := (* -1::Int L2_1_3)
+(+ #1080 L2_3_2)
+Leaked: decl L2_5_0 :: Int
+Leaked: decl L2_5_0 :: Int
+L2_5_0
+Leaked: decl L1_3_0 :: Int
+Leaked: decl L1_3_0 :: Int
+L1_3_0
+Leaked: decl L1_0_0 :: Int
+#1600 := (= L1_0_0 0::Int)
+decl L1_2_0 :: Int
+#1622 := (= L1_2_0 0::Int)
+decl L1_1_0 :: Int
+#2346 := (* -1::Int L1_1_0)
+decl L1_3_0 :: Int
+#2476 := (+ L1_3_0 #2346)
+#5393 := (<= 0::Int #2476)
+#5287 := (not #5393)
+decl L1_5_0 :: Int
+decl L1_4_0 :: Int
+#1719 := (<= L1_4_0 L1_5_0)
+#1698 := (<= L1_4_0 0::Int)
+#1679 := (not #1698)
+(and #1679 #1719 #5287 #1622 #1600)
+Leaked: Leaked: decl L1_1_n :: Int
+Leaked: decl L1_1_n :: Int
+L1_1_n
+Leaked: decl L1_3_n :: Int
+Leaked: decl L1_3_n :: Int
+L1_3_n
+Leaked: decl L2_3_2 :: Int
+#1118 := (* -1::Int L2_3_2)
+decl L2_3_0 :: Int
+(+ L2_3_0 #1118)
+Leaked: decl L2_0_1 :: Int
+(* -1::Int L2_0_1)
+Leaked: decl L2_5_3 :: Int
+decl L2_2_3 :: Int
+(<= L2_2_3 L2_5_3)
+Leaked: decl L1_0_n :: Int
+Leaked: decl L1_0_n :: Int
+L1_0_n
+Leaked: decl L1_0_0 :: Int
+#1600 := (= L1_0_0 0::Int)
+decl L1_2_0 :: Int
+#1622 := (= L1_2_0 0::Int)
+decl L1_1_0 :: Int
+decl L1_3_0 :: Int
+#1694 := (* -1::Int L1_3_0)
+#1596 := (+ #1694 L1_1_0)
+#1601 := (<= 0::Int #1596)
+#1646 := (not #1601)
+decl L1_5_0 :: Int
+decl L1_4_0 :: Int
+#1719 := (<= L1_4_0 L1_5_0)
+#1698 := (<= L1_4_0 0::Int)
+#1679 := (not #1698)
+(and #1679 #1719 #1646 #1622 #1600)
+Leaked: decl L2_5_3 :: Int
+decl L2_5_1 :: Int
+(= L2_5_1 L2_5_3)
+Leaked: decl L2_1_1 :: Int
+decl L2_1_2 :: Int
+#1089 := (* -1::Int L2_1_2)
+(+ #1089 L2_1_1)
+Leaked: decl L2_1_n :: Int
+#1106 := (* -1::Int L2_1_n)
+decl L2_3_n :: Int
+#1173 := (+ L2_3_n #1106)
+#1188 := (<= #1173 0::Int)
+(not #1188)
+Leaked: decl L1_1_0 :: Int
+Leaked: decl L1_1_0 :: Int
+L1_1_0
+Leaked: decl L2_4_2 :: Int
+Leaked: decl L2_4_2 :: Int
+L2_4_2
+Leaked: decl L1_2_0 :: Int
+(= L1_2_0 0::Int)
+Leaked: decl L2_3_0 :: Int
+Leaked: decl L2_3_0 :: Int
+L2_3_0
+Leaked: decl L2_5_n :: Int
+Leaked: decl L2_5_n :: Int
+L2_5_n
+Leaked: decl L1_1_n :: Int
+(* -1::Int L1_1_n)
+Leaked: Leaked: true
+Leaked: decl L2_3_2 :: Int
+#1118 := (* -1::Int L2_3_2)
+decl L2_3_0 :: Int
+#1091 := (+ L2_3_0 #1118)
+(= #1091 0::Int)
+Leaked: decl L2_2_3 :: Int
+decl L2_5_3 :: Int
+(<= L2_5_3 L2_2_3)
+Leaked: decl L2_4_3 :: Int
+decl L2_4_0 :: Int
+(= L2_4_0 L2_4_3)
+Leaked: decl L2_1_n :: Int
+#1106 := (* -1::Int L2_1_n)
+decl L2_3_n :: Int
+#1173 := (+ L2_3_n #1106)
+(<= #1173 0::Int)
+Leaked: decl L2_2_3 :: Int
+decl L2_5_3 :: Int
+#5260 := (<= L2_5_3 L2_2_3)
+(not #5260)
+Leaked: decl L2_5_3 :: Int
+decl L2_4_3 :: Int
+(<= L2_4_3 L2_5_3)
+Leaked: decl L2_1_3 :: Int
+(* -1::Int L2_1_3)
+Leaked: decl L2_0_1 :: Int
+#4799 := (* -1::Int L2_0_1)
+decl L2_4_1 :: Int
+(+ L2_4_1 #4799)
+Leaked: decl L2_3_n :: Int
+(* -1::Int L2_3_n)
+Leaked: decl L2_5_3 :: Int
+decl L2_4_3 :: Int
+#1126 := (<= L2_4_3 L2_5_3)
+(not #1126)
+Leaked: decl L2_4_3 :: Int
+Leaked: decl L2_4_3 :: Int
+L2_4_3
+Leaked: decl L2_3_2 :: Int
+decl L2_1_3 :: Int
+#1080 := (* -1::Int L2_1_3)
+#5274 := (+ #1080 L2_3_2)
+#5268 := (<= 0::Int #5274)
+#5285 := (not #5268)
+decl L2_1_1 :: Int
+decl L2_1_2 :: Int
+#1089 := (* -1::Int L2_1_2)
+#1150 := (+ #1089 L2_1_1)
+#1094 := (= #1150 0::Int)
+decl L2_3_3 :: Int
+decl L2_3_1 :: Int
+#1083 := (* -1::Int L2_3_1)
+#1103 := (+ #1083 L2_3_3)
+#1105 := (= #1103 0::Int)
+decl L2_5_3 :: Int
+decl L2_0_3 :: Int
+#1141 := (= L2_0_3 L2_5_3)
+decl L2_5_2 :: Int
+#1140 := (= L2_5_2 L2_5_3)
+decl L2_4_3 :: Int
+decl L2_4_2 :: Int
+#1139 := (= L2_4_2 L2_4_3)
+decl L2_2_2 :: Int
+#1138 := (= L2_2_2 L2_5_3)
+decl L2_5_1 :: Int
+#1137 := (= L2_5_1 L2_5_3)
+decl L2_4_1 :: Int
+#1136 := (= L2_4_1 L2_4_3)
+decl L2_2_3 :: Int
+decl L2_2_1 :: Int
+#1135 := (= L2_2_1 L2_2_3)
+decl L2_0_2 :: Int
+decl L2_0_1 :: Int
+#1134 := (= L2_0_1 L2_0_2)
+decl L2_5_0 :: Int
+#1133 := (= L2_5_0 L2_5_3)
+decl L2_4_0 :: Int
+#1132 := (= L2_4_0 L2_4_3)
+decl L2_2_0 :: Int
+#1131 := (= L2_2_0 L2_5_3)
+decl L2_0_0 :: Int
+#1130 := (= L2_0_0 L2_5_3)
+#1118 := (* -1::Int L2_3_2)
+decl L2_3_0 :: Int
+#1091 := (+ L2_3_0 #1118)
+#1161 := (= #1091 0::Int)
+#1126 := (<= L2_4_3 L2_5_3)
+#1127 := (not #1126)
+decl L2_1_0 :: Int
+#1149 := (+ L2_1_0 #1080)
+#1160 := (= #1149 0::Int)
+#5260 := (<= L2_5_3 L2_2_3)
+#5315 := (not #5260)
+#1190 := (<= L2_0_2 L2_5_3)
+#1101 := (not #1190)
+(and #1101 #5315 #1160 #1127 #1161 #1130 #1131 #1132 #1133 #1134 #1135 #1136 #1137 #1138 #1139 #1140 #1141 #1105 #1094 #5285)
+Leaked: decl L2_3_2 :: Int
+decl L2_1_3 :: Int
+#1080 := (* -1::Int L2_1_3)
+#5274 := (+ #1080 L2_3_2)
+(<= 0::Int #5274)
+Leaked: decl L2_5_3 :: Int
+decl L2_2_3 :: Int
+#1171 := (<= L2_2_3 L2_5_3)
+(not #1171)
+Leaked: decl L2_1_1 :: Int
+decl L2_1_2 :: Int
+#1089 := (* -1::Int L2_1_2)
+#1150 := (+ #1089 L2_1_1)
+(= #1150 0::Int)
+Leaked: decl L2_4_0 :: Int
+Leaked: decl L2_4_0 :: Int
+L2_4_0
+Leaked: decl L2_0_2 :: Int
+decl L2_0_1 :: Int
+(= L2_0_1 L2_0_2)
+Leaked: decl L2_3_2 :: Int
+decl L2_1_3 :: Int
+#1080 := (* -1::Int L2_1_3)
+#5274 := (+ #1080 L2_3_2)
+#5268 := (<= 0::Int #5274)
+(not #5268)
+Leaked: Leaked: decl L1_1_0 :: Int
+#2346 := (* -1::Int L1_1_0)
+decl L1_3_0 :: Int
+#2476 := (+ L1_3_0 #2346)
+(<= 0::Int #2476)
+Leaked: Bool
+Leaked: decl L2_1_0 :: Int
+#4161 := (* -1::Int L2_1_0)
+decl L2_3_0 :: Int
+#4148 := (+ L2_3_0 #4161)
+(<= #4148 0::Int)
+Leaked: decl L2_1_3 :: Int
+Leaked: decl L2_1_3 :: Int
+L2_1_3
+Leaked: decl L2_1_n :: Int
+(* -1::Int L2_1_n)
+Leaked: Int
+Leaked: decl L1_4_0 :: Int
+(<= L1_4_0 0::Int)
+Leaked: decl L2_5_3 :: Int
+decl L2_5_0 :: Int
+(= L2_5_0 L2_5_3)
+Leaked: Leaked: decl L1_0_0 :: Int
+(= L1_0_0 0::Int)
+Leaked: decl L1_5_n :: Int
+#1661 := (* -1::Int L1_5_n)
+decl L1_4_n :: Int
+#1716 := (+ L1_4_n #1661)
+(<= #1716 0::Int)
+Leaked: decl L2_3_n :: Int
+#1258 := (* -1::Int L2_3_n)
+decl L2_1_n :: Int
+(+ L2_1_n #1258)
+Leaked: decl L2_1_3 :: Int
+#1080 := (* -1::Int L2_1_3)
+decl L2_1_0 :: Int
+(+ L2_1_0 #1080)
+Leaked: decl L1_1_0 :: Int
+#2346 := (* -1::Int L1_1_0)
+decl L1_3_0 :: Int
+#2476 := (+ L1_3_0 #2346)
+(<= #2476 0::Int)
+Leaked: decl L2_0_n :: Int
+Leaked: decl L2_0_n :: Int
+L2_0_n
+Leaked: decl L2_0_3 :: Int
+(* -1::Int L2_0_3)
+Leaked: Leaked: decl L1_5_0 :: Int
+Leaked: decl L1_5_0 :: Int
+L1_5_0
+Leaked: decl L2_4_3 :: Int
+decl L2_4_2 :: Int
+(= L2_4_2 L2_4_3)
+Leaked: decl L2_1_0 :: Int
+Leaked: decl L2_1_0 :: Int
+L2_1_0
+Leaked: decl L2_5_3 :: Int
+decl L2_2_0 :: Int
+(= L2_2_0 L2_5_3)
+Leaked: decl L2_3_n :: Int
+Leaked: decl L2_3_n :: Int
+L2_3_n
+Leaked: decl L1_3_0 :: Int
+(* -1::Int L1_3_0)
+Leaked: decl L2_1_n :: Int
+Leaked: decl L2_1_n :: Int
+L2_1_n
+Leaked: decl L1_5_n :: Int
+(* -1::Int L1_5_n)
+Leaked: decl L1_0_n :: Int
+(= L1_0_n 0::Int)
+Leaked: decl L2_4_n :: Int
+Leaked: decl L2_4_n :: Int
+L2_4_n
+Leaked: decl L2_3_3 :: Int
+decl L2_3_1 :: Int
+#1083 := (* -1::Int L2_3_1)
+(+ #1083 L2_3_3)
+Leaked: decl L1_4_0 :: Int
+#1698 := (<= L1_4_0 0::Int)
+(not #1698)
+Leaked: decl L2_5_1 :: Int
+Leaked: decl L2_5_1 :: Int
+L2_5_1
+Leaked: decl L2_3_2 :: Int
+Leaked: decl L2_3_2 :: Int
+L2_3_2
+Leaked: decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_2_n :: Int
+#1100 := (+ L2_2_n #1195)
+(= #1100 0::Int)
+Leaked: decl L1_1_0 :: Int
+(* -1::Int L1_1_0)
+Leaked: decl L2_5_3 :: Int
+decl L2_0_2 :: Int
+(<= L2_0_2 L2_5_3)
+Leaked: decl L2_4_1 :: Int
+Leaked: decl L2_4_1 :: Int
+L2_4_1
+Leaked: decl L2_3_2 :: Int
+#1118 := (* -1::Int L2_3_2)
+decl L2_1_3 :: Int
+#1110 := (+ L2_1_3 #1118)
+(<= 0::Int #1110)
+Leaked: decl L2_2_3 :: Int
+decl L2_2_1 :: Int
+(= L2_2_1 L2_2_3)
+Leaked: decl L2_1_2 :: Int
+#1089 := (* -1::Int L2_1_2)
+decl L2_3_2 :: Int
+(+ L2_3_2 #1089)
+Leaked: decl L1_5_n :: Int
+Leaked: decl L1_5_n :: Int
+L1_5_n
+Leaked: decl L2_1_0 :: Int
+#4161 := (* -1::Int L2_1_0)
+decl L2_3_0 :: Int
+(+ L2_3_0 #4161)
+Leaked: decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_4_n :: Int
+#1170 := (+ L2_4_n #1195)
+(<= #1170 0::Int)
+Leaked: decl L2_0_3 :: Int
+#4833 := (* -1::Int L2_0_3)
+decl L2_2_3 :: Int
+#4840 := (+ L2_2_3 #4833)
+#4841 := (>= #4840 0::Int)
+(not #4841)
+Leaked: decl L2_3_2 :: Int
+#1118 := (* -1::Int L2_3_2)
+decl L2_1_3 :: Int
+(+ L2_1_3 #1118)
+Leaked: decl L1_3_n :: Int
+#5296 := (* -1::Int L1_3_n)
+decl L1_1_n :: Int
+#5265 := (+ L1_1_n #5296)
+#5375 := (<= #5265 0::Int)
+#5399 := (not #5375)
+decl L1_0_n :: Int
+#1732 := (= L1_0_n 0::Int)
+decl L1_5_n :: Int
+#1661 := (* -1::Int L1_5_n)
+decl L1_4_n :: Int
+#1716 := (+ L1_4_n #1661)
+#1717 := (<= #1716 0::Int)
+decl L1_2_n :: Int
+#1676 := (= L1_2_n 0::Int)
+#1642 := (<= L1_4_n 0::Int)
+#1508 := (not #1642)
+(and #1508 #1676 #1717 #1732 #5399)
+Leaked: decl L2_5_3 :: Int
+decl L2_0_2 :: Int
+#1190 := (<= L2_0_2 L2_5_3)
+(not #1190)
+Leaked: Leaked: -1::Int
+Leaked: decl L2_1_2 :: Int
+Leaked: decl L2_1_2 :: Int
+L2_1_2
+Leaked: decl L2_0_3 :: Int
+Leaked: decl L2_0_3 :: Int
+L2_0_3
+Leaked: decl L2_5_3 :: Int
+Leaked: decl L2_5_3 :: Int
+L2_5_3
+Leaked: decl L1_1_0 :: Int
+decl L1_3_0 :: Int
+#1694 := (* -1::Int L1_3_0)
+(+ #1694 L1_1_0)
+Leaked: decl L2_1_n :: Int
+#1106 := (* -1::Int L2_1_n)
+decl L2_3_n :: Int
+#1173 := (+ L2_3_n #1106)
+#1188 := (<= #1173 0::Int)
+#1226 := (not #1188)
+decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_4_n :: Int
+#1170 := (+ L2_4_n #1195)
+#1185 := (<= #1170 0::Int)
+#1177 := (not #1185)
+decl L2_0_n :: Int
+#1123 := (+ L2_0_n #1195)
+#1167 := (= #1123 0::Int)
+decl L2_2_n :: Int
+#1100 := (+ L2_2_n #1195)
+#1166 := (= #1100 0::Int)
+(and #1166 #1167 #1177 #1226)
+Leaked: decl L2_3_3 :: Int
+decl L2_3_1 :: Int
+#1083 := (* -1::Int L2_3_1)
+#1103 := (+ #1083 L2_3_3)
+(= #1103 0::Int)
+Leaked: decl L2_0_3 :: Int
+#4833 := (* -1::Int L2_0_3)
+decl L2_2_3 :: Int
+#4840 := (+ L2_2_3 #4833)
+(>= #4840 0::Int)
+Leaked: decl L2_2_n :: Int
+Leaked: decl L2_2_n :: Int
+L2_2_n
+Leaked: decl L1_3_n :: Int
+(* -1::Int L1_3_n)
+Leaked: decl L1_0_n :: Int
+#1732 := (= L1_0_n 0::Int)
+decl L1_5_n :: Int
+#1661 := (* -1::Int L1_5_n)
+decl L1_4_n :: Int
+#1716 := (+ L1_4_n #1661)
+#1717 := (<= #1716 0::Int)
+decl L1_2_n :: Int
+#1676 := (= L1_2_n 0::Int)
+decl L1_1_n :: Int
+#1607 := (* -1::Int L1_1_n)
+decl L1_3_n :: Int
+#1625 := (+ L1_3_n #1607)
+#1610 := (<= #1625 0::Int)
+#1635 := (not #1610)
+#1642 := (<= L1_4_n 0::Int)
+#1508 := (not #1642)
+(and #1508 #1635 #1676 #1717 #1732)
+Leaked: decl L2_1_1 :: Int
+Leaked: decl L2_1_1 :: Int
+L2_1_1
+Leaked: decl L2_0_3 :: Int
+#4833 := (* -1::Int L2_0_3)
+decl L2_2_3 :: Int
+(+ L2_2_3 #4833)
+Leaked: decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_0_n :: Int
+(+ L2_0_n #1195)
+Leaked: decl L2_3_2 :: Int
+#1118 := (* -1::Int L2_3_2)
+decl L2_1_3 :: Int
+#1110 := (+ L2_1_3 #1118)
+#1113 := (<= 0::Int #1110)
+(not #1113)
+Leaked: decl L2_5_3 :: Int
+decl L2_2_2 :: Int
+(= L2_2_2 L2_5_3)
+Leaked: decl L2_1_2 :: Int
+#1089 := (* -1::Int L2_1_2)
+decl L2_3_2 :: Int
+#4811 := (+ L2_3_2 #1089)
+(<= #4811 0::Int)
+Leaked: decl L2_5_3 :: Int
+decl L2_0_3 :: Int
+(= L2_0_3 L2_5_3)
+Leaked: decl L2_1_n :: Int
+#1106 := (* -1::Int L2_1_n)
+decl L2_3_n :: Int
+(+ L2_3_n #1106)
+Leaked: Leaked: decl L1_4_n :: Int
+(<= L1_4_n 0::Int)
+Leaked: decl L1_5_0 :: Int
+decl L1_4_0 :: Int
+(<= L1_4_0 L1_5_0)
+Leaked: decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_4_n :: Int
+#1170 := (+ L2_4_n #1195)
+#1185 := (<= #1170 0::Int)
+(not #1185)
+Leaked: decl L2_1_2 :: Int
+(* -1::Int L2_1_2)
+Leaked: decl L2_3_2 :: Int
+(* -1::Int L2_3_2)
+Leaked: decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_4_n :: Int
+(+ L2_4_n #1195)
+Leaked: decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_0_n :: Int
+#1123 := (+ L2_0_n #1195)
+(= #1123 0::Int)
+Leaked: decl L2_4_3 :: Int
+decl L2_4_1 :: Int
+(= L2_4_1 L2_4_3)
+Leaked: decl L2_0_2 :: Int
+Leaked: decl L2_0_2 :: Int
+L2_0_2
+Leaked: 0::Int
+Leaked: Leaked: decl L1_1_n :: Int
+#1607 := (* -1::Int L1_1_n)
+decl L1_3_n :: Int
+(+ L1_3_n #1607)
+Leaked: decl L1_3_n :: Int
+#5296 := (* -1::Int L1_3_n)
+decl L1_1_n :: Int
+#5265 := (+ L1_1_n #5296)
+(<= #5265 0::Int)
+Leaked: decl L1_3_n :: Int
+#5296 := (* -1::Int L1_3_n)
+decl L1_1_n :: Int
+#5265 := (+ L1_1_n #5296)
+#5375 := (<= #5265 0::Int)
+(not #5375)
+Leaked: decl L1_3_n :: Int
+#5296 := (* -1::Int L1_3_n)
+decl L1_1_n :: Int
+(+ L1_1_n #5296)
+Leaked: decl L2_0_0 :: Int
+Leaked: decl L2_0_0 :: Int
+L2_0_0
+Leaked: decl L1_2_0 :: Int
+Leaked: decl L1_2_0 :: Int
+L1_2_0
+Leaked: Leaked: decl L1_1_0 :: Int
+decl L1_3_0 :: Int
+#1694 := (* -1::Int L1_3_0)
+#1596 := (+ #1694 L1_1_0)
+(<= 0::Int #1596)
+Leaked: decl L2_5_2 :: Int
+Leaked: decl L2_5_2 :: Int
+L2_5_2
+Leaked: decl L1_2_n :: Int
+Leaked: decl L1_2_n :: Int
+L1_2_n
+Leaked: decl L1_1_0 :: Int
+decl L1_3_0 :: Int
+#1694 := (* -1::Int L1_3_0)
+#1596 := (+ #1694 L1_1_0)
+#1601 := (<= 0::Int #1596)
+(not #1601)
+Leaked: decl L2_3_n :: Int
+#1258 := (* -1::Int L2_3_n)
+decl L2_1_n :: Int
+#1259 := (+ L2_1_n #1258)
+(<= #1259 0::Int)
+Leaked: decl L2_2_0 :: Int
+Leaked: decl L2_2_0 :: Int
+L2_2_0
+Leaked: decl L2_2_1 :: Int
+Leaked: decl L2_2_1 :: Int
+L2_2_1
+Leaked: decl L1_4_n :: Int
+#1642 := (<= L1_4_n 0::Int)
+(not #1642)
+Leaked: decl L2_3_2 :: Int
+#1118 := (* -1::Int L2_3_2)
+decl L2_1_3 :: Int
+#1110 := (+ L2_1_3 #1118)
+#1113 := (<= 0::Int #1110)
+#1109 := (not #1113)
+decl L2_1_1 :: Int
+decl L2_1_2 :: Int
+#1089 := (* -1::Int L2_1_2)
+#1150 := (+ #1089 L2_1_1)
+#1094 := (= #1150 0::Int)
+decl L2_3_3 :: Int
+decl L2_3_1 :: Int
+#1083 := (* -1::Int L2_3_1)
+#1103 := (+ #1083 L2_3_3)
+#1105 := (= #1103 0::Int)
+decl L2_5_3 :: Int
+decl L2_0_3 :: Int
+#1141 := (= L2_0_3 L2_5_3)
+decl L2_5_2 :: Int
+#1140 := (= L2_5_2 L2_5_3)
+decl L2_4_3 :: Int
+decl L2_4_2 :: Int
+#1139 := (= L2_4_2 L2_4_3)
+decl L2_2_2 :: Int
+#1138 := (= L2_2_2 L2_5_3)
+decl L2_5_1 :: Int
+#1137 := (= L2_5_1 L2_5_3)
+decl L2_4_1 :: Int
+#1136 := (= L2_4_1 L2_4_3)
+decl L2_2_3 :: Int
+decl L2_2_1 :: Int
+#1135 := (= L2_2_1 L2_2_3)
+decl L2_0_2 :: Int
+decl L2_0_1 :: Int
+#1134 := (= L2_0_1 L2_0_2)
+decl L2_5_0 :: Int
+#1133 := (= L2_5_0 L2_5_3)
+decl L2_4_0 :: Int
+#1132 := (= L2_4_0 L2_4_3)
+decl L2_2_0 :: Int
+#1131 := (= L2_2_0 L2_5_3)
+decl L2_0_0 :: Int
+#1130 := (= L2_0_0 L2_5_3)
+decl L2_3_0 :: Int
+#1091 := (+ L2_3_0 #1118)
+#1161 := (= #1091 0::Int)
+#1126 := (<= L2_4_3 L2_5_3)
+#1127 := (not #1126)
+#1080 := (* -1::Int L2_1_3)
+decl L2_1_0 :: Int
+#1149 := (+ L2_1_0 #1080)
+#1160 := (= #1149 0::Int)
+#1171 := (<= L2_2_3 L2_5_3)
+#1174 := (not #1171)
+#1190 := (<= L2_0_2 L2_5_3)
+#1101 := (not #1190)
+(and #1101 #1174 #1160 #1127 #1161 #1130 #1131 #1132 #1133 #1134 #1135 #1136 #1137 #1138 #1139 #1140 #1141 #1105 #1094 #1109)
+Leaked: decl L1_1_0 :: Int
+#2346 := (* -1::Int L1_1_0)
+decl L1_3_0 :: Int
+#2476 := (+ L1_3_0 #2346)
+#5393 := (<= 0::Int #2476)
+(not #5393)
+Leaked: decl L1_1_n :: Int
+#1607 := (* -1::Int L1_1_n)
+decl L1_3_n :: Int
+#1625 := (+ L1_3_n #1607)
+(<= #1625 0::Int)
+Leaked: decl L1_5_n :: Int
+#1661 := (* -1::Int L1_5_n)
+decl L1_4_n :: Int
+(+ L1_4_n #1661)
+Leaked: decl L2_1_3 :: Int
+#1080 := (* -1::Int L2_1_3)
+decl L2_1_0 :: Int
+#1149 := (+ L2_1_0 #1080)
+(= #1149 0::Int)
+Leaked: decl L2_5_n :: Int
+#1195 := (* -1::Int L2_5_n)
+decl L2_2_n :: Int
+(+ L2_2_n #1195)
+Leaked: decl L2_3_n :: Int
+#1258 := (* -1::Int L2_3_n)
+decl L2_1_n :: Int
+#1259 := (+ L2_1_n #1258)
+#5302 := (<= #1259 0::Int)
+(not #5302)
+Leaked: decl L2_3_1 :: Int
+(* -1::Int L2_3_1)
+Leaked: decl L1_1_0 :: Int
+#2346 := (* -1::Int L1_1_0)
+decl L1_3_0 :: Int
+(+ L1_3_0 #2346)
+Leaked: decl L1_4_n :: Int
+Leaked: decl L1_4_n :: Int
+L1_4_n
+Leaked: decl L2_2_2 :: Int
+Leaked: decl L2_2_2 :: Int
+L2_2_2
+Leaked: decl L2_0_1 :: Int
+Leaked: decl L2_0_1 :: Int
+L2_0_1
+Memory leak detected for small object allocator 'ast_manager'. 12980 bytes leaked
